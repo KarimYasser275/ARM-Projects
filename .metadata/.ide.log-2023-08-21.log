@@ -1,0 +1,42 @@
+2023-08-22 20:54:17,082 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,450x165,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2023-08-22 20:54:29,586 [INFO] Gpio:273 - dependency for GPIO [RCC, SYS]
+2023-08-22 20:55:34,402 [INFO] Gpio:273 - dependency for GPIO [RCC, SYS]
+2023-08-22 21:05:34,797 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 811155184 Bytes (1073741824)
+2023-08-22 21:05:38,253 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 830988184 Bytes (1073741824)
+2023-08-22 21:05:38,673 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 879376344 Bytes (1073741824)
+2023-08-22 21:05:38,976 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: NVIC
+2023-08-22 21:05:38,976 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: TIM1_8F1
+2023-08-22 21:05:38,977 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SYS
+2023-08-22 21:05:38,977 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: GPIO
+2023-08-22 21:05:38,977 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: RCC
+2023-08-22 21:05:38,983 [INFO] CodeGenerator:799 - code generatio: config db path: C:\ST\STM32CubeIDE_1.13.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.9.0.202307051724\\db\
+2023-08-22 21:05:39,320 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\e0162112\STM32CubeIDE\workspace_1.13.0\ARM\MXTmpFiles\license.tmp_save
+2023-08-22 21:05:39,472 [INFO] CodeEngine:279 - Generated code: C:\Users\e0162112\STM32CubeIDE\workspace_1.13.0\ARM\MXTmpFiles\license.tmp
+2023-08-22 21:05:39,530 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\e0162112\STM32CubeIDE\workspace_1.13.0\ARM\Core\Src\gpio.c_save
+2023-08-22 21:05:39,668 [INFO] CodeEngine:279 - Generated code: C:\Users\e0162112\STM32CubeIDE\workspace_1.13.0\ARM\Core\Src\gpio.c
+2023-08-22 21:05:39,698 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\e0162112\STM32CubeIDE\workspace_1.13.0\ARM\Core\Inc\gpio.h_save
+2023-08-22 21:05:39,811 [INFO] CodeEngine:279 - Generated code: C:\Users\e0162112\STM32CubeIDE\workspace_1.13.0\ARM\Core\Inc\gpio.h
+2023-08-22 21:05:39,937 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\e0162112\STM32CubeIDE\workspace_1.13.0\ARM\Core\Src\tim.c_save
+2023-08-22 21:05:40,125 [INFO] CodeEngine:279 - Generated code: C:\Users\e0162112\STM32CubeIDE\workspace_1.13.0\ARM\Core\Src\tim.c
+2023-08-22 21:05:40,151 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\e0162112\STM32CubeIDE\workspace_1.13.0\ARM\Core\Inc\tim.h_save
+2023-08-22 21:05:40,237 [INFO] CodeEngine:279 - Generated code: C:\Users\e0162112\STM32CubeIDE\workspace_1.13.0\ARM\Core\Inc\tim.h
+2023-08-22 21:05:40,272 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\e0162112\STM32CubeIDE\workspace_1.13.0\ARM\Core\Src\stm32f1xx_it.c_save
+2023-08-22 21:05:40,483 [INFO] CodeEngine:279 - Generated code: C:\Users\e0162112\STM32CubeIDE\workspace_1.13.0\ARM\Core\Src\stm32f1xx_it.c
+2023-08-22 21:05:40,500 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\e0162112\STM32CubeIDE\workspace_1.13.0\ARM\Core\Inc\stm32f1xx_it.h_save
+2023-08-22 21:05:40,587 [INFO] CodeEngine:279 - Generated code: C:\Users\e0162112\STM32CubeIDE\workspace_1.13.0\ARM\Core\Inc\stm32f1xx_it.h
+2023-08-22 21:05:40,623 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\e0162112\STM32CubeIDE\workspace_1.13.0\ARM\Core\Src\stm32f1xx_hal_msp.c_save
+2023-08-22 21:05:40,727 [INFO] CodeEngine:279 - Generated code: C:\Users\e0162112\STM32CubeIDE\workspace_1.13.0\ARM\Core\Src\stm32f1xx_hal_msp.c
+2023-08-22 21:05:40,742 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\e0162112\STM32CubeIDE\workspace_1.13.0\ARM\MXTmpFiles\system.tmp_save
+2023-08-22 21:05:40,821 [INFO] CodeEngine:279 - Generated code: C:\Users\e0162112\STM32CubeIDE\workspace_1.13.0\ARM\MXTmpFiles\system.tmp
+2023-08-22 21:05:40,855 [INFO] CodeEngine:311 - oldGeneratedFile, C:\Users\e0162112\STM32CubeIDE\workspace_1.13.0\ARM\Core\Inc\stm32f1xx_hal_conf.h_save
+2023-08-22 21:05:40,959 [INFO] CodeEngine:335 - Generated code: C:\Users\e0162112\STM32CubeIDE\workspace_1.13.0\ARM\Core\Inc\stm32f1xx_hal_conf.h
+2023-08-22 21:05:41,010 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\e0162112\STM32CubeIDE\workspace_1.13.0\ARM\Core\Inc\main.h_save
+2023-08-22 21:05:41,106 [INFO] CodeEngine:279 - Generated code: C:\Users\e0162112\STM32CubeIDE\workspace_1.13.0\ARM\Core\Inc\main.h
+2023-08-22 21:05:41,123 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\e0162112\STM32CubeIDE\workspace_1.13.0\ARM\Core\Src\main.c_save
+2023-08-22 21:05:41,454 [INFO] CodeEngine:279 - Generated code: C:\Users\e0162112\STM32CubeIDE\workspace_1.13.0\ARM\Core\Src\main.c
+2023-08-22 21:05:42,566 [INFO] ProjectBuilder:3064 - Time for Copy HAL[1] : 590mS.
+2023-08-22 21:05:42,573 [INFO] ProjectBuilder:4404 - Project Generator version: 4.1.0
+2023-08-22 21:05:42,783 [INFO] ConfigFileManager:1457 - The Die is : DIE410
+2023-08-22 21:05:45,831 [INFO] ProjectBuilder:4626 - Time for Generating toolchain IDE Files: 3258mS.
+2023-08-22 21:05:45,835 [INFO] ProjectBuilder:2935 - Time for Copy CMSIS : 2mS.
+2023-08-22 21:05:45,848 [INFO] ProjectBuilder:2935 - Time for Copy CMSIS : 1mS.

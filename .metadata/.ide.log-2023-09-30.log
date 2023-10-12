@@ -1,0 +1,42 @@
+2023-09-30 13:55:30,851 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2023-09-30 13:55:32,152 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 777448480 Bytes (1073741824)
+2023-09-30 13:55:32,220 [ERROR] ConfigurationRetriever:142 - IOException on connection: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+2023-09-30 13:55:32,233 [ERROR] ConfigurationRetriever:142 - IOException on connection: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+2023-09-30 13:55:32,238 [ERROR] ConfigurationRetriever:142 - IOException on connection: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+2023-09-30 13:55:32,648 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: NVIC
+2023-09-30 13:55:32,648 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: USART
+2023-09-30 13:55:32,648 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SYS
+2023-09-30 13:55:32,649 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: GPIO
+2023-09-30 13:55:32,649 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: RCC
+2023-09-30 13:55:32,655 [INFO] CodeGenerator:799 - code generatio: config db path: C:\ST\STM32CubeIDE_1.13.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.9.0.202307051724\\db\
+2023-09-30 13:55:32,817 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\e0162112\STM32CubeIDE\workspace_1.13.0\ARM_Bootloader\MXTmpFiles\license.tmp_save
+2023-09-30 13:55:33,161 [INFO] CodeEngine:279 - Generated code: C:\Users\e0162112\STM32CubeIDE\workspace_1.13.0\ARM_Bootloader\MXTmpFiles\license.tmp
+2023-09-30 13:55:33,266 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\e0162112\STM32CubeIDE\workspace_1.13.0\ARM_Bootloader\MXTmpFiles\gpio.tmp_save
+2023-09-30 13:55:33,370 [INFO] CodeEngine:279 - Generated code: C:\Users\e0162112\STM32CubeIDE\workspace_1.13.0\ARM_Bootloader\MXTmpFiles\gpio.tmp
+2023-09-30 13:55:33,450 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\e0162112\STM32CubeIDE\workspace_1.13.0\ARM_Bootloader\Core\Src\stm32f1xx_it.c_save
+2023-09-30 13:55:33,560 [INFO] CodeEngine:279 - Generated code: C:\Users\e0162112\STM32CubeIDE\workspace_1.13.0\ARM_Bootloader\Core\Src\stm32f1xx_it.c
+2023-09-30 13:55:33,577 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\e0162112\STM32CubeIDE\workspace_1.13.0\ARM_Bootloader\Core\Inc\stm32f1xx_it.h_save
+2023-09-30 13:55:33,653 [INFO] CodeEngine:279 - Generated code: C:\Users\e0162112\STM32CubeIDE\workspace_1.13.0\ARM_Bootloader\Core\Inc\stm32f1xx_it.h
+2023-09-30 13:55:33,689 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\e0162112\STM32CubeIDE\workspace_1.13.0\ARM_Bootloader\Core\Src\stm32f1xx_hal_msp.c_save
+2023-09-30 13:55:33,810 [INFO] CodeEngine:279 - Generated code: C:\Users\e0162112\STM32CubeIDE\workspace_1.13.0\ARM_Bootloader\Core\Src\stm32f1xx_hal_msp.c
+2023-09-30 13:55:33,827 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\e0162112\STM32CubeIDE\workspace_1.13.0\ARM_Bootloader\MXTmpFiles\system.tmp_save
+2023-09-30 13:55:33,919 [INFO] CodeEngine:279 - Generated code: C:\Users\e0162112\STM32CubeIDE\workspace_1.13.0\ARM_Bootloader\MXTmpFiles\system.tmp
+2023-09-30 13:55:33,951 [INFO] CodeEngine:311 - oldGeneratedFile, C:\Users\e0162112\STM32CubeIDE\workspace_1.13.0\ARM_Bootloader\Core\Inc\stm32f1xx_hal_conf.h_save
+2023-09-30 13:55:34,067 [INFO] CodeEngine:335 - Generated code: C:\Users\e0162112\STM32CubeIDE\workspace_1.13.0\ARM_Bootloader\Core\Inc\stm32f1xx_hal_conf.h
+2023-09-30 13:55:34,163 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\e0162112\STM32CubeIDE\workspace_1.13.0\ARM_Bootloader\Core\Inc\main.h_save
+2023-09-30 13:55:34,273 [INFO] CodeEngine:279 - Generated code: C:\Users\e0162112\STM32CubeIDE\workspace_1.13.0\ARM_Bootloader\Core\Inc\main.h
+2023-09-30 13:55:34,294 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\e0162112\STM32CubeIDE\workspace_1.13.0\ARM_Bootloader\Core\Src\main.c_save
+2023-09-30 13:55:34,498 [INFO] CodeEngine:279 - Generated code: C:\Users\e0162112\STM32CubeIDE\workspace_1.13.0\ARM_Bootloader\Core\Src\main.c
+2023-09-30 13:55:35,470 [INFO] ProjectBuilder:3064 - Time for Copy HAL[1] : 469mS.
+2023-09-30 13:55:35,480 [INFO] ProjectBuilder:4404 - Project Generator version: 4.1.0
+2023-09-30 13:55:35,908 [INFO] ConfigFileManager:1457 - The Die is : DIE410
+2023-09-30 13:55:35,926 [INFO] ApiDbMcu:507 - Load IP Config File for FATFS
+2023-09-30 13:55:35,936 [INFO] ApiDbMcu:507 - Load IP Config File for FREERTOS
+2023-09-30 13:55:35,945 [INFO] ApiDbMcu:507 - Load IP Config File for USB_DEVICE
+2023-09-30 13:55:37,012 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] 
+2023-09-30 13:55:38,933 [INFO] ProjectBuilder:4626 - Time for Generating toolchain IDE Files: 3453mS.
+2023-09-30 13:55:38,937 [INFO] ProjectBuilder:2935 - Time for Copy CMSIS : 3mS.
+2023-09-30 13:55:38,945 [INFO] ProjectBuilder:2935 - Time for Copy CMSIS : 1mS.
+2023-09-30 13:57:26,152 [ERROR] ConfigurationRetriever:142 - IOException on connection: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+2023-09-30 13:57:26,159 [ERROR] ConfigurationRetriever:142 - IOException on connection: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+2023-09-30 13:57:26,167 [ERROR] ConfigurationRetriever:142 - IOException on connection: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target

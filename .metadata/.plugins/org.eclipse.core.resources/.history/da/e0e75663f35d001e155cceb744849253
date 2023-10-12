@@ -1,0 +1,85 @@
+/*
+ * SCHD.c
+ *
+ *  Created on: Aug 20, 2023
+ *      Author: E0162112
+ */
+#include "stdint.h"
+#include "SCHD.h"
+#include "stm32f103xb.h"
+#include "main.h"
+#include "stm32f1xx_hal_uart.h"
+
+extern UART_HandleTypeDef huart1;
+
+uint8_t Task_1_cnt = 0;
+
+uint16_t Temprature = 0;
+
+void Task_1 (void)
+{
+	Task_1_cnt ++;
+	HAL_UART_Transmit(&huart1, &Task_1_cnt, 1, 100);
+}
+
+
+SCHD_ConfigParm_t SCHDParam [MAX_TASK_NUMBER]= {
+                                                        {
+                                                            .TaskPeriodUs = 1, /* Period of Task 1 is 1 ms = 1000 us */
+															.TaskFunc = Task_1,
+															.TaskActiveFlag = 0U/* Pointer to function Task_1ms to execute its sequence */
+                                                        }
+
+};
+
+void SCHD_Init(void)
+{
+   uint8_t index = MAX_TASK_NUMBER;
+   for( index = 0 ; index < MAX_TASK_NUMBER ; index++ )
+   {
+       SCHDParam[index].TaskActiveFlag = 1U;
+       SCHDParam[index].TaskCounter = 0U;
+       SCHDParam[index].TaskReadyFlag = false;
+   }
+
+
+}
+
+void SCHD_InterruptHandler(void)
+{
+	uint8_t index;
+	    for( index = 0 ; index < MAX_TASK_NUMBER ; index++ )
+	    {
+	        if( ++SCHDParam[index].TaskCounter >= SCHDParam[index].TaskPeriodUs )
+	        {
+
+	            SCHDParam[index].TaskReadyFlag = true;
+	            SCHDParam[index].TaskCounter = 0u;
+
+	        }
+	        else
+	        {
+	            /*Do nothing*/
+	        }
+	    }
+}
+
+
+void SCHD_Main(void)
+{
+    uint8_t index;
+    for( index = 0 ; index < MAX_TASK_NUMBER ; index++ )
+    {
+        if(SCHDParam[index].TaskReadyFlag == 1)
+        {
+            SCHDParam[index].TaskFunc();
+            SCHDParam[index].TaskReadyFlag = false;
+        }
+        else
+        {
+            /*Do nothing*/
+        }
+    }
+}
+
+

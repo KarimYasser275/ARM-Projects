@@ -1,0 +1,166 @@
+/*
+ * Bootloader.c
+ *
+ *  Created on: Sep 20, 2023
+ *      Author: E0162112
+ */
+
+#include "stdint.h"
+#include "Bootloader.h"
+#include "main.h"
+#include "Bit_Math.h"
+
+//extern UART_HandleTypeDef huart1;
+
+Bootloader_Params_t BootLoader ;
+
+
+void Bootloader_Init(void)
+{
+	/*FPEC unlock sequence */
+	FPEC_REGISTER->FLASH_KEYR = KEY1 ;
+	FPEC_REGISTER->FLASH_KEYR = KEY2 ;
+
+}
+
+void Bootloader_main(void)
+{
+	uint8_t UART_RxData;
+	switch(BootLoader.State)
+	{
+	case BL_NOT_INITIALIZED :
+		/*check if bootloader msg is being received*/
+		if (BootLoader.Timeout_count < 255)
+		{
+			HAL_UART_Receive(&huart1, &UART_RxData, 1, 10);
+			if (UART_RxData == BOOTLOADER_START_MSG)
+			{
+				Bootloader_EraseData();
+				BootLoader.State == BL_INITIALIZED;
+			}
+			else if (UART_RxData == APPLICATION_START_MSG)
+			{
+				BootLoader.State == BL_DONE;
+			}
+			else
+			{
+				BootLoader.Timeout_count++;
+			}
+		}
+		else
+		{
+			BootLoader.State == BL_DONE;
+		}
+		break;
+	case BL_INITIALIZED:
+		BootLoader.Length = 0;
+		BootLoader.Address = 0;
+		BootLoader.Timeout_count = 0;
+		BootLoader.sum = 0;
+		BootLoader.type = BL_RECEIVE_LENGTH_BYTE;
+		break;
+
+	case BL_RECEIVE_LENGTH_BYTE:
+		/*Receive length byte*/
+		HAL_UART_Receive(&huart1, &UART_RxData, 1, 10);
+		BootLoader.Length = UART_RxData;
+		BootLoader.sum += BootLoader.Length;
+		BootLoader.State = BL_RECEIVE_ADDRESS_BYTES;
+		break;
+
+	case BL_RECEIVE_ADDRESS_BYTES:
+		/*Receive 2 address bytes*/
+		HAL_UART_Receive(&huart1, &UART_RxData, 1, 10); //receive higher byte of address
+		BootLoader.sum += UART_RxData;
+		BootLoader.Address |= (uint16_t)UART_RxData << 8 ;
+
+		HAL_UART_Receive(&huart1, &UART_RxData, 1, 10);	//receive lower byte of address
+		BootLoader.sum += UART_RxData;
+		BootLoader.Address |= (uint16_t)UART_RxData;
+
+		BootLoader.State = BL_RECEIVE_TYPE_BYTE;
+		break;
+
+	case BL_RECEIVE_TYPE_BYTE:
+		/*receive type byte*/
+		HAL_UART_Receive(&huart1, &UART_RxData, 1, 10); //receive type byte
+		BootLoader.type = UART_RxData;
+		BootLoader.sum += BootLoader.type;
+
+		BootLoader.State = BL_RECEIVE_DATA_BYTES;
+		break;
+
+	case BL_RECEIVE_DATA_BYTES:
+		/*Loop for the LENGTH of line and flash*/
+		for (uint8_t i = 0; i < BootLoader.Length ; i++)
+		{
+			HAL_UART_Receive(&huart1, &UART_RxData, 1, 10); //receive higher byte of address
+			BootLoader.sum += UART_RxData;
+
+		}
+		break;
+
+	case BL_RECEIVE_CHECKSUM_BYTE:
+		/*Receive checksum byte and calculate msg checksum then compare the 2 numbers*/
+
+		if(BootLoader.type == BL_EOF)
+		{
+			BootLoader.State = BL_DONE;
+		}
+		else
+		{
+			BootLoader.State = BL_INITIALIZED;
+		}
+
+		break;
+
+	case BL_DONE:
+		/*Jump to application address*/
+		break;
+
+	}
+
+
+
+
+}
+
+void Bootloader_EraseData(void)
+{
+	/*Erase all flash memory from 0x8001000 to end of flash*/
+
+	SET_BIT(FPEC_REGISTER->FLASH_CR , OFFSET_FLASH_CR_PER); // enable page erase
+
+	for (uint32_t i = 0 ; i < APPLICATION_END_ADDRESS; i+=1024)
+	{
+		while(GET_BIT(FPEC_REGISTER->FLASH_SR,OFFSET_FLASH_SR_BSY));	//Wait for busy flag to clear
+		FPEC_REGISTER->FLASH_AR = APPLICATION_START_ADDRESS + i;		//load memory address into FLASH_AR register
+		SET_BIT(FPEC_REGISTER->FLASH_CR , OFFSET_FLASH_CR_STRT);		//Start erasing
+
+	}
+	CLR_BIT(FPEC_REGISTER->FLASH_CR , OFFSET_FLASH_CR_PER); 			// disable page erase
+}
+
+void Bootloader_WriteData(uint16_t Data, uint32_t Address)
+{
+
+	SET_BIT(FPEC_REGISTER->FLASH_CR , OFFSET_FLASH_CR_PG); 				// enable page program
+	*((volatile uint16_t*)Address) = Data;
+	while(GET_BIT(FPEC_REGISTER->FLASH_SR,OFFSET_FLASH_SR_BSY));		// Wait for busy flag to clear
+	SET_BIT(FPEC_REGISTER->FLASH_SR, OFFSET_FLASH_SR_EOP);
+	CLR_BIT(FPEC_REGISTER->FLASH_CR , OFFSET_FLASH_CR_PG);
+}
+
+uint8_t LineCheckSum_Calculate(uint8_t arr[] ,uint8_t length)
+{
+	uint16_t retval = 0;
+	for (int i =0; i < length; i++)
+	{
+		retval += arr[i];
+	}
+	retval = retval & 0xff;
+	retval = ~retval;
+	retval +=1;
+	return (uint8_t)retval;
+
+}

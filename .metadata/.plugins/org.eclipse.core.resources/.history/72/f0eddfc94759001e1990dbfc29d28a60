@@ -1,0 +1,37 @@
+
+#ifndef USART_PRIVATE_H
+#define USART_PRIVATE_H
+
+typedef struct{
+	volatile uint32_t SR;
+	volatile uint32_t DR;
+	volatile uint32_t BRR;
+	volatile uint32_t CR[MAX_USART_CR];
+	volatile uint32_t GTPR;
+}USART_Register;
+
+typedef enum
+{
+	USART_CR1,
+	USART_CR2,
+	USART_CR3,
+	MAX_USART_CR
+}USART_CR_t;
+
+typedef enum
+{
+	OFFSET_USART_SR_PE,
+	OFFSET_USART_SR_FE,
+	OFFSET_USART_SR_NE,
+	OFFSET_USART_SR_ORE,
+	OFFSET_USART_SR_IDLE,
+	OFFSET_USART_SR_RXNE,
+	OFFSET_USART_SR_TC,
+	OFFSET_USART_SR_TXE,
+	OFFSET_USART_SR_LBD,
+	OFFSET_USART_SR_CTS,
+};
+
+#define 	USART1 		((USART_Register *) 0x40013800)
+
+#endif

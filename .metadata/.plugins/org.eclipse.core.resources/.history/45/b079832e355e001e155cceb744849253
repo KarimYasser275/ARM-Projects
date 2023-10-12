@@ -1,0 +1,25 @@
+/*
+ * Bootloader.h
+ *
+ *  Created on: Sep 20, 2023
+ *      Author: E0162112
+ */
+
+#ifndef INC_BOOTLOADER_H_
+#define INC_BOOTLOADER_H_
+
+#include "FPEC.h"
+
+#define APPLICATION_START_ADDRESS		0x08001000
+#define APPLICATION_END_ADDRESS			0x08007C00
+#define APPLICATION_LENGTH				64
+
+
+
+
+void Bootloader_main(void);
+void Bootloader_EraseData(void);
+uint8_t LineCheckSum_Calculate(arr[] , length);
+
+
+#endif /* INC_BOOTLOADER_H_ */

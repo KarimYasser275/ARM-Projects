@@ -1,0 +1,87 @@
+/*
+ * Bootloader.c
+ *
+ *  Created on: Sep 20, 2023
+ *      Author: E0162112
+ */
+
+#include "stdint.h"
+#include "Bootloader.h"
+#include "Bit_Math.h"
+
+extern UART_HandleTypeDef huart1;
+
+Bootloader_Params_t BootLoader ;
+
+void Bootloader_Init(void)
+{
+	/*FPEC unlock sequence */
+	FPEC_REGISTER->FLASH_KEYR = KEY1 ;
+	FPEC_REGISTER->FLASH_KEYR = KEY2 ;
+
+	/*erase all memory*/
+	Bootloader_EraseData();
+}
+
+void Bootloader_main(void)
+{
+	uint8_t UART_RxData;
+	switch(BootLoader.State)
+	{
+	case BL_NOT_INITIALIZED :
+		if (BootLoader.Timeout_count < 255)
+		{
+			HAL_UART_Receive(&huart1, &UART_RxData, 1, 10);
+			if (UART_RxData == BOOTLOADER_START_MSG)
+			{
+				BootLoader.State == BL_INITIALIZED;
+			}
+			else if (UART_RxData == APPLICATION_START_MSG)
+			{
+				BootLoader.State == BL_DONE;
+			}
+			else
+			{
+				BootLoader.Timeout_count++;
+			}
+		}
+
+
+		break;
+
+	}
+
+
+
+
+}
+
+void Bootloader_EraseData(void)
+{
+	/*Erase all flash memory from 0x8001000 to end of flash*/
+
+	SET_BIT(FPEC_REGISTER->FLASH_CR , OFFSET_FLASH_CR_PER); // enable page erase
+
+	for (int i = 0 ; i < APPLICATION_END_ADDRESS; i++)
+	{
+		while(GET_BIT(FPEC_REGISTER->FLASH_SR,OFFSET_FLASH_SR_BSY));	//Wait for busy flag to clear
+		FPEC_REGISTER->FLASH_AR = APPLICATION_START_ADDRESS + (i*1024); //load memory address into FLASH_AR register
+		SET_BIT(FPEC_REGISTER->FLASH_CR , OFFSET_FLASH_CR_STRT);		//Start erasing
+
+	}
+	CLEAR_BIT(FPEC_REGISTER->FLASH_CR , OFFSET_FLASH_CR_PER); // enable page erase
+}
+
+uint8_t LineCheckSum_Calculate(arr[] , length)
+{
+	uint16_t retVal = 0;
+	for (int i =0; i < length; i++)
+	{
+		retval += arr[i];
+	}
+	retval = retval & 0xff;
+	retval = ~retval;
+	retval +=1;
+	return (uint8_t)retval;
+
+}

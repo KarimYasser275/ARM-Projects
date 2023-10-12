@@ -1,0 +1,149 @@
+2023-09-13 13:02:33,009 [INFO] Gpio:273 - dependency for GPIO [RCC, SYS]
+2023-09-13 13:02:57,244 [INFO] ADCParametersView:116 -                Rank 1 : false
+2023-09-13 13:02:57,244 [INFO] ADCParametersView:116 -                Rank 1 : false
+2023-09-13 13:02:57,244 [INFO] ADCParametersView:116 -                Rank 1 : false
+2023-09-13 13:02:57,244 [INFO] ADCParametersView:116 -                Rank 1 : false
+2023-09-13 13:02:57,245 [INFO] ADCParametersView:116 -                Rank 1 : false
+2023-09-13 13:02:57,245 [INFO] ADCParametersView:116 -                Rank 1 : false
+2023-09-13 13:02:57,245 [INFO] ADCParametersView:116 -                Rank 1 : false
+2023-09-13 13:02:57,245 [INFO] ADCParametersView:116 -                Rank 1 : false
+2023-09-13 13:02:57,245 [INFO] ADCParametersView:116 -                Rank 1 : false
+2023-09-13 13:02:57,245 [INFO] ADCParametersView:116 -                Rank 1 : false
+2023-09-13 13:02:57,249 [INFO] ADCParametersView:116 -                Rank 1 : false
+2023-09-13 13:02:57,259 [INFO] ADCParametersView:116 -                Rank 1 : false
+2023-09-13 13:02:57,259 [INFO] ADCParametersView:116 -                Rank 1 : false
+2023-09-13 13:02:57,260 [INFO] ADCParametersView:116 -                Rank 1 : false
+2023-09-13 13:02:57,260 [INFO] ADCParametersView:116 -                Rank 1 : false
+2023-09-13 13:02:57,260 [INFO] ADCParametersView:116 -                Rank 1 : false
+2023-09-13 13:02:57,260 [INFO] ADCParametersView:116 -                Rank 1 : false
+2023-09-13 13:02:57,260 [INFO] ADCParametersView:116 -                Rank 1 : false
+2023-09-13 13:02:57,260 [INFO] ADCParametersView:116 -                Rank 1 : false
+2023-09-13 13:02:57,260 [INFO] ADCParametersView:116 -                Rank 1 : false
+2023-09-13 13:02:57,260 [INFO] ADCParametersView:116 -                Rank 1 : false
+2023-09-13 13:02:57,264 [INFO] ADCParametersView:116 -                Rank 1 : false
+2023-09-13 13:03:04,242 [INFO] ADCParametersView:116 -                Rank 1 : false
+2023-09-13 13:03:04,242 [INFO] ADCParametersView:116 -                Rank 1 : false
+2023-09-13 13:03:04,242 [INFO] ADCParametersView:116 -                Rank 1 : false
+2023-09-13 13:03:04,242 [INFO] ADCParametersView:116 -                Rank 1 : false
+2023-09-13 13:03:04,243 [INFO] ADCParametersView:116 -                Rank 1 : false
+2023-09-13 13:03:04,243 [INFO] ADCParametersView:116 -                Rank 1 : false
+2023-09-13 13:03:04,243 [INFO] ADCParametersView:116 -                Rank 1 : false
+2023-09-13 13:03:04,243 [INFO] ADCParametersView:116 -                Rank 1 : false
+2023-09-13 13:03:04,243 [INFO] ADCParametersView:116 -                Rank 1 : false
+2023-09-13 13:03:04,243 [INFO] ADCParametersView:116 -                Rank 1 : false
+2023-09-13 13:03:04,246 [INFO] ADCParametersView:116 -                Rank 1 : false
+2023-09-13 13:03:14,755 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 707465968 Bytes (1073741824)
+2023-09-13 13:03:17,883 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 823335664 Bytes (1073741824)
+2023-09-13 13:03:18,115 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: NVIC
+2023-09-13 13:03:18,115 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: DMA
+2023-09-13 13:03:18,115 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: TIM1_8F1
+2023-09-13 13:03:18,115 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SYS
+2023-09-13 13:03:18,115 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: GPIO
+2023-09-13 13:03:18,115 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: ADC
+2023-09-13 13:03:18,115 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: RCC
+2023-09-13 13:03:18,119 [INFO] CodeGenerator:799 - code generatio: config db path: C:\ST\STM32CubeIDE_1.13.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.9.0.202307051724\\db\
+2023-09-13 13:03:18,125 [INFO] Argument:319 - Argument : hdmavalue: null
+2023-09-13 13:03:18,125 [INFO] Argument:321 - 	 sub Args: 
+2023-09-13 13:03:18,125 [INFO] Argument:319 - Argument : Instancevalue: DMA1_Channel1
+2023-09-13 13:03:18,125 [INFO] Argument:329 - Argument : Instancevalue: DMA1_Channel1
+2023-09-13 13:03:18,125 [INFO] Argument:319 - Argument : Initvalue: null
+2023-09-13 13:03:18,125 [INFO] Argument:321 - 	 sub Args: 
+2023-09-13 13:03:18,125 [INFO] Argument:319 - Argument : Directionvalue: DMA_PERIPH_TO_MEMORY
+2023-09-13 13:03:18,125 [INFO] Argument:329 - Argument : Directionvalue: DMA_PERIPH_TO_MEMORY
+2023-09-13 13:03:18,125 [INFO] Argument:319 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2023-09-13 13:03:18,125 [INFO] Argument:329 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2023-09-13 13:03:18,125 [INFO] Argument:319 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2023-09-13 13:03:18,125 [INFO] Argument:329 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2023-09-13 13:03:18,126 [INFO] Argument:319 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_BYTE
+2023-09-13 13:03:18,126 [INFO] Argument:329 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_BYTE
+2023-09-13 13:03:18,126 [INFO] Argument:319 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_BYTE
+2023-09-13 13:03:18,126 [INFO] Argument:329 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_BYTE
+2023-09-13 13:03:18,126 [INFO] Argument:319 - Argument : Modevalue: DMA_NORMAL
+2023-09-13 13:03:18,126 [INFO] Argument:329 - Argument : Modevalue: DMA_NORMAL
+2023-09-13 13:03:18,126 [INFO] Argument:319 - Argument : Priorityvalue: DMA_PRIORITY_VERY_HIGH
+2023-09-13 13:03:18,126 [INFO] Argument:329 - Argument : Priorityvalue: DMA_PRIORITY_VERY_HIGH
+2023-09-13 13:03:18,126 [INFO] Argument:319 - Argument : Lockvalue: null
+2023-09-13 13:03:18,126 [INFO] Argument:329 - Argument : Lockvalue: null
+2023-09-13 13:03:18,126 [INFO] Argument:319 - Argument : Statevalue: null
+2023-09-13 13:03:18,126 [INFO] Argument:329 - Argument : Statevalue: null
+2023-09-13 13:03:18,126 [INFO] Argument:319 - Argument : Parentvalue: null
+2023-09-13 13:03:18,126 [INFO] Argument:329 - Argument : Parentvalue: null
+2023-09-13 13:03:18,126 [INFO] Argument:319 - Argument : XferCpltCallbackvalue: null
+2023-09-13 13:03:18,126 [INFO] Argument:329 - Argument : XferCpltCallbackvalue: null
+2023-09-13 13:03:18,126 [INFO] Argument:319 - Argument : XferHalfCpltCallbackvalue: null
+2023-09-13 13:03:18,126 [INFO] Argument:329 - Argument : XferHalfCpltCallbackvalue: null
+2023-09-13 13:03:18,126 [INFO] Argument:319 - Argument : XferErrorCallbackvalue: null
+2023-09-13 13:03:18,126 [INFO] Argument:329 - Argument : XferErrorCallbackvalue: null
+2023-09-13 13:03:18,126 [INFO] Argument:319 - Argument : ErrorCodevalue: null
+2023-09-13 13:03:18,126 [INFO] Argument:329 - Argument : ErrorCodevalue: null
+2023-09-13 13:03:18,382 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\e0162112\STM32CubeIDE\workspace_1.13.0\ARM\MXTmpFiles\license.tmp_save
+2023-09-13 13:03:18,504 [INFO] CodeEngine:279 - Generated code: C:\Users\e0162112\STM32CubeIDE\workspace_1.13.0\ARM\MXTmpFiles\license.tmp
+2023-09-13 13:03:18,557 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\e0162112\STM32CubeIDE\workspace_1.13.0\ARM\Core\Src\gpio.c_save
+2023-09-13 13:03:18,667 [INFO] CodeEngine:279 - Generated code: C:\Users\e0162112\STM32CubeIDE\workspace_1.13.0\ARM\Core\Src\gpio.c
+2023-09-13 13:03:18,690 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\e0162112\STM32CubeIDE\workspace_1.13.0\ARM\Core\Inc\gpio.h_save
+2023-09-13 13:03:18,756 [INFO] CodeEngine:279 - Generated code: C:\Users\e0162112\STM32CubeIDE\workspace_1.13.0\ARM\Core\Inc\gpio.h
+2023-09-13 13:03:18,865 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\e0162112\STM32CubeIDE\workspace_1.13.0\ARM\Core\Src\adc.c_save
+2023-09-13 13:03:18,992 [INFO] CodeEngine:279 - Generated code: C:\Users\e0162112\STM32CubeIDE\workspace_1.13.0\ARM\Core\Src\adc.c
+2023-09-13 13:03:19,011 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\e0162112\STM32CubeIDE\workspace_1.13.0\ARM\Core\Inc\adc.h_save
+2023-09-13 13:03:19,078 [INFO] CodeEngine:279 - Generated code: C:\Users\e0162112\STM32CubeIDE\workspace_1.13.0\ARM\Core\Inc\adc.h
+2023-09-13 13:03:19,104 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\e0162112\STM32CubeIDE\workspace_1.13.0\ARM\Core\Src\dma.c_save
+2023-09-13 13:03:19,165 [INFO] CodeEngine:279 - Generated code: C:\Users\e0162112\STM32CubeIDE\workspace_1.13.0\ARM\Core\Src\dma.c
+2023-09-13 13:03:19,179 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\e0162112\STM32CubeIDE\workspace_1.13.0\ARM\Core\Inc\dma.h_save
+2023-09-13 13:03:19,244 [INFO] CodeEngine:279 - Generated code: C:\Users\e0162112\STM32CubeIDE\workspace_1.13.0\ARM\Core\Inc\dma.h
+2023-09-13 13:03:19,281 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\e0162112\STM32CubeIDE\workspace_1.13.0\ARM\Core\Src\tim.c_save
+2023-09-13 13:03:19,361 [INFO] CodeEngine:279 - Generated code: C:\Users\e0162112\STM32CubeIDE\workspace_1.13.0\ARM\Core\Src\tim.c
+2023-09-13 13:03:19,377 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\e0162112\STM32CubeIDE\workspace_1.13.0\ARM\Core\Inc\tim.h_save
+2023-09-13 13:03:19,441 [INFO] CodeEngine:279 - Generated code: C:\Users\e0162112\STM32CubeIDE\workspace_1.13.0\ARM\Core\Inc\tim.h
+2023-09-13 13:03:19,465 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\e0162112\STM32CubeIDE\workspace_1.13.0\ARM\Core\Src\stm32f1xx_it.c_save
+2023-09-13 13:03:19,601 [INFO] CodeEngine:279 - Generated code: C:\Users\e0162112\STM32CubeIDE\workspace_1.13.0\ARM\Core\Src\stm32f1xx_it.c
+2023-09-13 13:03:19,614 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\e0162112\STM32CubeIDE\workspace_1.13.0\ARM\Core\Inc\stm32f1xx_it.h_save
+2023-09-13 13:03:19,669 [INFO] CodeEngine:279 - Generated code: C:\Users\e0162112\STM32CubeIDE\workspace_1.13.0\ARM\Core\Inc\stm32f1xx_it.h
+2023-09-13 13:03:19,689 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\e0162112\STM32CubeIDE\workspace_1.13.0\ARM\Core\Src\stm32f1xx_hal_msp.c_save
+2023-09-13 13:03:19,763 [INFO] CodeEngine:279 - Generated code: C:\Users\e0162112\STM32CubeIDE\workspace_1.13.0\ARM\Core\Src\stm32f1xx_hal_msp.c
+2023-09-13 13:03:19,774 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\e0162112\STM32CubeIDE\workspace_1.13.0\ARM\MXTmpFiles\system.tmp_save
+2023-09-13 13:03:19,821 [INFO] CodeEngine:279 - Generated code: C:\Users\e0162112\STM32CubeIDE\workspace_1.13.0\ARM\MXTmpFiles\system.tmp
+2023-09-13 13:03:19,841 [INFO] CodeEngine:311 - oldGeneratedFile, C:\Users\e0162112\STM32CubeIDE\workspace_1.13.0\ARM\Core\Inc\stm32f1xx_hal_conf.h_save
+2023-09-13 13:03:19,914 [INFO] CodeEngine:335 - Generated code: C:\Users\e0162112\STM32CubeIDE\workspace_1.13.0\ARM\Core\Inc\stm32f1xx_hal_conf.h
+2023-09-13 13:03:19,957 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\e0162112\STM32CubeIDE\workspace_1.13.0\ARM\Core\Inc\main.h_save
+2023-09-13 13:03:20,026 [INFO] CodeEngine:279 - Generated code: C:\Users\e0162112\STM32CubeIDE\workspace_1.13.0\ARM\Core\Inc\main.h
+2023-09-13 13:03:20,041 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\e0162112\STM32CubeIDE\workspace_1.13.0\ARM\Core\Src\main.c_save
+2023-09-13 13:03:20,129 [INFO] CodeEngine:279 - Generated code: C:\Users\e0162112\STM32CubeIDE\workspace_1.13.0\ARM\Core\Src\main.c
+2023-09-13 13:03:20,812 [INFO] ProjectBuilder:3064 - Time for Copy HAL[1] : 369mS.
+2023-09-13 13:03:20,816 [INFO] ProjectBuilder:4404 - Project Generator version: 4.1.0
+2023-09-13 13:03:20,951 [INFO] ConfigFileManager:1457 - The Die is : DIE410
+2023-09-13 13:03:23,449 [INFO] ProjectBuilder:4626 - Time for Generating toolchain IDE Files: 2631mS.
+2023-09-13 13:03:23,458 [INFO] ProjectBuilder:2935 - Time for Copy CMSIS : 4mS.
+2023-09-13 13:03:23,468 [INFO] ProjectBuilder:2935 - Time for Copy CMSIS : 0mS.
+2023-09-13 13:07:11,582 [INFO] ADCParametersView:116 -                Rank 1 : false
+2023-09-13 13:07:11,582 [INFO] ADCParametersView:116 -                Rank 1 : false
+2023-09-13 13:07:11,582 [INFO] ADCParametersView:116 -                Rank 1 : false
+2023-09-13 13:07:11,582 [INFO] ADCParametersView:116 -                Rank 1 : false
+2023-09-13 13:07:11,582 [INFO] ADCParametersView:116 -                Rank 1 : false
+2023-09-13 13:07:11,582 [INFO] ADCParametersView:116 -                Rank 1 : false
+2023-09-13 13:07:11,582 [INFO] ADCParametersView:116 -                Rank 1 : false
+2023-09-13 13:07:11,582 [INFO] ADCParametersView:116 -                Rank 1 : false
+2023-09-13 13:07:11,582 [INFO] ADCParametersView:116 -                Rank 1 : false
+2023-09-13 13:07:11,582 [INFO] ADCParametersView:116 -                Rank 1 : false
+2023-09-13 13:07:11,586 [INFO] ADCParametersView:116 -                Rank 1 : false
+2023-09-13 13:07:11,594 [INFO] ADCParametersView:116 -                Rank 1 : false
+2023-09-13 13:07:11,594 [INFO] ADCParametersView:116 -                Rank 1 : false
+2023-09-13 13:07:11,594 [INFO] ADCParametersView:116 -                Rank 1 : false
+2023-09-13 13:07:11,594 [INFO] ADCParametersView:116 -                Rank 1 : false
+2023-09-13 13:07:11,594 [INFO] ADCParametersView:116 -                Rank 1 : false
+2023-09-13 13:07:11,594 [INFO] ADCParametersView:116 -                Rank 1 : false
+2023-09-13 13:07:11,595 [INFO] ADCParametersView:116 -                Rank 1 : false
+2023-09-13 13:07:11,595 [INFO] ADCParametersView:116 -                Rank 1 : false
+2023-09-13 13:07:11,595 [INFO] ADCParametersView:116 -                Rank 1 : false
+2023-09-13 13:07:11,595 [INFO] ADCParametersView:116 -                Rank 1 : false
+2023-09-13 13:07:11,598 [INFO] ADCParametersView:116 -                Rank 1 : false
+2023-09-13 14:30:39,914 [INFO] ADCParametersView:116 -                Rank 1 : false
+2023-09-13 14:30:39,914 [INFO] ADCParametersView:116 -                Rank 1 : false
+2023-09-13 14:30:39,914 [INFO] ADCParametersView:116 -                Rank 1 : false
+2023-09-13 14:30:39,914 [INFO] ADCParametersView:116 -                Rank 1 : false
+2023-09-13 14:30:39,914 [INFO] ADCParametersView:116 -                Rank 1 : false
+2023-09-13 14:30:39,914 [INFO] ADCParametersView:116 -                Rank 1 : false
+2023-09-13 14:30:39,914 [INFO] ADCParametersView:116 -                Rank 1 : false
+2023-09-13 14:30:39,914 [INFO] ADCParametersView:116 -                Rank 1 : false
+2023-09-13 14:30:39,914 [INFO] ADCParametersView:116 -                Rank 1 : false
+2023-09-13 14:30:39,915 [INFO] ADCParametersView:116 -                Rank 1 : false
+2023-09-13 14:30:39,918 [INFO] ADCParametersView:116 -                Rank 1 : false

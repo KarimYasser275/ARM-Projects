@@ -1,0 +1,55 @@
+/*
+ * Bootloader.h
+ *
+ *  Created on: Sep 20, 2023
+ *      Author: E0162112
+ */
+
+#ifndef INC_BOOTLOADER_H_
+#define INC_BOOTLOADER_H_
+
+#include "FPEC.h"
+
+#define APPLICATION_START_ADDRESS		0x08001000
+#define APPLICATION_END_ADDRESS			0x08007C00
+#define APPLICATION_LENGTH				64
+
+#define BOOTLOADER_START_MSG			0x1f
+#define	APPLICATION_START_MSG			0xf1
+
+
+void Bootloader_main(void);
+void Bootloader_EraseData(void);
+uint8_t LineCheckSum_Calculate(arr[] , length);
+
+typedef enum
+{
+	BL_NOT_INITIALIZED,
+	BL_INITIALIZED,
+	BL_RECEIVE_LENGTH_BYTE,
+	BL_RECEIVE_ADDRESS_BYTES,
+	BL_RECEIVE_TYPE_BYTE,
+	BL_RECEIVE_DATA_BYTES,
+	BL_RECEIVE_CHECKSUM_BYTE,
+	BL_DONE,
+}Bootloader_State_t;
+
+typedef enum
+{
+	BL_ADDRESS_HIGH = 0x04,
+	BL_DATA			= 0x00,
+	BL_EOF			= 0x01,
+}BootLoader_types;
+
+typedef struct
+{
+	Bootloader_State_t State = BL_NOT_INITIALIZED;
+	uint8_t Timeout_count = 0;
+	uint8_t Length = 0;
+
+	uint16_t sum = 0;
+	uint16_t Address = 0x0000;
+
+}Bootloader_Params_t;
+
+#endif /* INC_BOOTLOADER_H_ */

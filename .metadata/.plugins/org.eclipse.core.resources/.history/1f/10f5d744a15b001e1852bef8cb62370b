@@ -1,0 +1,50 @@
+/*
+ * Bootloader.c
+ *
+ *  Created on: Sep 20, 2023
+ *      Author: E0162112
+ */
+
+#include "stdint.h"
+#include "Bootloader.h"
+#include "Bit_Math.h"
+
+
+uint8_t UART_RxData = 0;
+extern UART_HandleTypeDef huart1;
+
+void Bootloader_Init(void)
+{
+	/*FPEC unlock sequence */
+	FPEC_REGISTER->FLASH_KEYR = KEY1 ;
+	FPEC_REGISTER->FLASH_KEYR = KEY2 ;
+
+	/*erase all memory*/
+	Bootloader_EraseData();
+}
+
+void Bootloader_main(void)
+{
+	HAL_UART_Receive(&huart1, &UART_RxData, Size, Timeout);
+
+
+
+
+
+}
+
+void Bootloader_EraseData(void)
+{
+	/*Erase all flash memory from 0x8001000 to end of flash*/
+
+	SET_BIT(FPEC_REGISTER->FLASH_CR , OFFSET_FLASH_CR_PER); // enable page erase
+
+	for (int i = 0 ; i < APPLICATION_END_ADDRESS; i++)
+	{
+		while(GET_BIT(FPEC_REGISTER->FLASH_SR,OFFSET_FLASH_SR_BSY));	//Wait for busy flag to clear
+		FPEC_REGISTER->FLASH_AR = APPLICATION_START_ADDRESS + (i*1024); //load memory address into FLASH_AR register
+		SET_BIT(FPEC_REGISTER->FLASH_CR , OFFSET_FLASH_CR_STRT);		//Start erasing
+
+	}
+	CLEAR_BIT(FPEC_REGISTER->FLASH_CR , OFFSET_FLASH_CR_PER); // enable page erase
+}

@@ -1,0 +1,736 @@
+14:34:28 **** Incremental Build of configuration Debug for project ARM_Bootloader ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/Bootloader.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/Bootloader.d" -MT"Core/Src/Bootloader.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/Bootloader.o"
+In file included from ../Core/Src/Bootloader.c:11:
+../Core/Inc/Bit_Math.h:9: warning: "SET_BIT" redefined
+    9 | #define SET_BIT(VAR,BIT)          VAR |=  (1 << (BIT))
+      | 
+In file included from ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h:29,
+                 from ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h:27,
+                 from ../Core/Inc/stm32f1xx_hal_conf.h:238,
+                 from ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/Bootloader.c:10:
+../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h:177: note: this is the location of the previous definition
+  177 | #define SET_BIT(REG, BIT)     ((REG) |= (BIT))
+      | 
+In file included from ../Core/Src/Bootloader.c:10:
+../Core/Src/Bootloader.c: In function 'Bootloader_main':
+../Core/Inc/main.h:49:75: error: 'huart1' undeclared (first use in this function)
+   49 | #define UART_1_RECEIVE(ptr_data,size,timeout)           HAL_UART_Receive(&huart1, ptr_data, size, timeout)
+      |                                                                           ^~~~~~
+../Core/Src/Bootloader.c:33:25: note: in expansion of macro 'UART_1_RECEIVE'
+   33 |                         UART_1_RECEIVE( &UART_RxData, 1, 10);
+      |                         ^~~~~~~~~~~~~~
+../Core/Inc/main.h:49:75: note: each undeclared identifier is reported only once for each function it appears in
+   49 | #define UART_1_RECEIVE(ptr_data,size,timeout)           HAL_UART_Receive(&huart1, ptr_data, size, timeout)
+      |                                                                           ^~~~~~
+../Core/Src/Bootloader.c:33:25: note: in expansion of macro 'UART_1_RECEIVE'
+   33 |                         UART_1_RECEIVE( &UART_RxData, 1, 10);
+      |                         ^~~~~~~~~~~~~~
+../Core/Src/Bootloader.c:37:50: warning: statement with no effect [-Wunused-value]
+   37 |                                 BootLoader.state == BL_INITIALIZED;
+      |                                 ~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+../Core/Src/Bootloader.c:41:50: warning: statement with no effect [-Wunused-value]
+   41 |                                 BootLoader.state == BL_DONE;
+      |                                 ~~~~~~~~~~~~~~~~~^~~~~~~~~~
+../Core/Src/Bootloader.c:50:42: warning: statement with no effect [-Wunused-value]
+   50 |                         BootLoader.state == BL_DONE;
+      |                         ~~~~~~~~~~~~~~~~~^~~~~~~~~~
+../Core/Src/Bootloader.c:119:34: warning: statement with no effect [-Wunused-value]
+  119 |                 BootLoader.state == BL_RECEIVE_CHECKSUM_BYTE;
+      |                 ~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/Bootloader.c:154:41: warning: pointer targets in passing argument 1 of 'UART_1_TRANSMIT' differ in signedness [-Wpointer-sign]
+  154 |                         UART_1_TRANSMIT("ok");
+      |                                         ^~~~
+      |                                         |
+      |                                         char *
+In file included from ../Core/Src/Bootloader.c:10:
+../Core/Inc/main.h:62:30: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+   62 | void UART_1_TRANSMIT(uint8_t arr[]);
+      |                      ~~~~~~~~^~~~~
+make: *** [Core/Src/subdir.mk:37: Core/Src/Bootloader.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+14:35:55 **** Incremental Build of configuration Debug for project ARM_Bootloader ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/Bootloader.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/Bootloader.d" -MT"Core/Src/Bootloader.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/Bootloader.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/stm32f1xx_hal_msp.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f1xx_hal_msp.d" -MT"Core/Src/stm32f1xx_hal_msp.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/stm32f1xx_hal_msp.o"
+arm-none-eabi-gcc "../Core/Src/stm32f1xx_it.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f1xx_it.d" -MT"Core/Src/stm32f1xx_it.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/stm32f1xx_it.o"
+In file included from ../Core/Src/Bootloader.c:11:
+../Core/Inc/Bit_Math.h:9: warning: "SET_BIT" redefined
+    9 | #define SET_BIT(VAR,BIT)          VAR |=  (1 << (BIT))
+      | 
+In file included from ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h:29,
+                 from ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h:27,
+                 from ../Core/Inc/stm32f1xx_hal_conf.h:238,
+                 from ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/Bootloader.c:10:
+../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h:177: note: this is the location of the previous definition
+  177 | #define SET_BIT(REG, BIT)     ((REG) |= (BIT))
+      | 
+../Core/Src/Bootloader.c: In function 'Bootloader_main':
+../Core/Src/Bootloader.c:33:25: warning: implicit declaration of function 'UART_1_RECEIVE'; did you mean 'USART_CR1_RXNEIE'? [-Wimplicit-function-declaration]
+   33 |                         UART_1_RECEIVE( &UART_RxData, 1, 10);
+      |                         ^~~~~~~~~~~~~~
+      |                         USART_CR1_RXNEIE
+../Core/Src/Bootloader.c:37:50: warning: statement with no effect [-Wunused-value]
+   37 |                                 BootLoader.state == BL_INITIALIZED;
+      |                                 ~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+../Core/Src/Bootloader.c:41:50: warning: statement with no effect [-Wunused-value]
+   41 |                                 BootLoader.state == BL_DONE;
+      |                                 ~~~~~~~~~~~~~~~~~^~~~~~~~~~
+../Core/Src/Bootloader.c:50:42: warning: statement with no effect [-Wunused-value]
+   50 |                         BootLoader.state == BL_DONE;
+      |                         ~~~~~~~~~~~~~~~~~^~~~~~~~~~
+../Core/Src/Bootloader.c:119:34: warning: statement with no effect [-Wunused-value]
+  119 |                 BootLoader.state == BL_RECEIVE_CHECKSUM_BYTE;
+      |                 ~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/Bootloader.c:154:41: warning: pointer targets in passing argument 1 of 'UART_1_TRANSMIT' differ in signedness [-Wpointer-sign]
+  154 |                         UART_1_TRANSMIT("ok");
+      |                                         ^~~~
+      |                                         |
+      |                                         char *
+In file included from ../Core/Src/Bootloader.c:10:
+../Core/Inc/main.h:62:30: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+   62 | void UART_1_TRANSMIT(uint8_t arr[]);
+      |                      ~~~~~~~~^~~~~
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:99:3: warning: implicit declaration of function 'Bootloader_Init'; did you mean 'Bootloader_main'? [-Wimplicit-function-declaration]
+   99 |   Bootloader_Init();
+      |   ^~~~~~~~~~~~~~~
+      |   Bootloader_main
+../Core/Src/main.c:100:11: warning: unused variable 'flag' [-Wunused-variable]
+  100 |   uint8_t flag = 0;
+      |           ^~~~
+../Core/Src/main.c: In function 'UART_1_TRANSMIT':
+../Core/Src/main.c:212:24: warning: implicit declaration of function 'GET_BIT'; did you mean 'SET_BIT'? [-Wimplicit-function-declaration]
+  212 |                 while((GET_BIT((USART1 -> SR), 6)) == 0);
+      |                        ^~~~~~~
+      |                        SET_BIT
+arm-none-eabi-gcc -o "ARM_Bootloader.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\e0162112\STM32CubeIDE\workspace_1.13.0\ARM_Bootloader\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ARM_Bootloader.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+C:/ST/STM32CubeIDE_1.13.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/bin/ld.exe: ./Core/Src/Bootloader.o: in function `Bootloader_main':
+C:/Users/e0162112/STM32CubeIDE/workspace_1.13.0/ARM_Bootloader/Debug/../Core/Src/Bootloader.c:33: undefined reference to `UART_1_RECEIVE'
+C:/ST/STM32CubeIDE_1.13.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/bin/ld.exe: C:/Users/e0162112/STM32CubeIDE/workspace_1.13.0/ARM_Bootloader/Debug/../Core/Src/Bootloader.c:65: undefined reference to `UART_1_RECEIVE'
+C:/ST/STM32CubeIDE_1.13.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/bin/ld.exe: C:/Users/e0162112/STM32CubeIDE/workspace_1.13.0/ARM_Bootloader/Debug/../Core/Src/Bootloader.c:73: undefined reference to `UART_1_RECEIVE'
+C:/ST/STM32CubeIDE_1.13.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/bin/ld.exe: C:/Users/e0162112/STM32CubeIDE/workspace_1.13.0/ARM_Bootloader/Debug/../Core/Src/Bootloader.c:77: undefined reference to `UART_1_RECEIVE'
+C:/ST/STM32CubeIDE_1.13.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/bin/ld.exe: C:/Users/e0162112/STM32CubeIDE/workspace_1.13.0/ARM_Bootloader/Debug/../Core/Src/Bootloader.c:86: undefined reference to `UART_1_RECEIVE'
+C:/ST/STM32CubeIDE_1.13.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/bin/ld.exe: ./Core/Src/Bootloader.o:C:/Users/e0162112/STM32CubeIDE/workspace_1.13.0/ARM_Bootloader/Debug/../Core/Src/Bootloader.c:105: more undefined references to `UART_1_RECEIVE' follow
+C:/ST/STM32CubeIDE_1.13.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/bin/ld.exe: ./Core/Src/main.o: in function `UART_1_TRANSMIT':
+C:/Users/e0162112/STM32CubeIDE/workspace_1.13.0/ARM_Bootloader/Debug/../Core/Src/main.c:212: undefined reference to `GET_BIT'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:67: ARM_Bootloader.elf] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+20:05:27 **** Incremental Build of configuration Debug for project ARM_Bootloader ****
+make -j8 all 
+arm-none-eabi-gcc -o "ARM_Bootloader.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\e0162112\STM32CubeIDE\workspace_1.13.0\ARM_Bootloader\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ARM_Bootloader.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+C:/ST/STM32CubeIDE_1.13.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/bin/ld.exe: ./Core/Src/Bootloader.o: in function `Bootloader_main':
+C:/Users/e0162112/STM32CubeIDE/workspace_1.13.0/ARM_Bootloader/Debug/../Core/Src/Bootloader.c:33: undefined reference to `UART_1_RECEIVE'
+C:/ST/STM32CubeIDE_1.13.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/bin/ld.exe: C:/Users/e0162112/STM32CubeIDE/workspace_1.13.0/ARM_Bootloader/Debug/../Core/Src/Bootloader.c:65: undefined reference to `UART_1_RECEIVE'
+C:/ST/STM32CubeIDE_1.13.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/bin/ld.exe: C:/Users/e0162112/STM32CubeIDE/workspace_1.13.0/ARM_Bootloader/Debug/../Core/Src/Bootloader.c:73: undefined reference to `UART_1_RECEIVE'
+C:/ST/STM32CubeIDE_1.13.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/bin/ld.exe: C:/Users/e0162112/STM32CubeIDE/workspace_1.13.0/ARM_Bootloader/Debug/../Core/Src/Bootloader.c:77: undefined reference to `UART_1_RECEIVE'
+C:/ST/STM32CubeIDE_1.13.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/bin/ld.exe: C:/Users/e0162112/STM32CubeIDE/workspace_1.13.0/ARM_Bootloader/Debug/../Core/Src/Bootloader.c:86: undefined reference to `UART_1_RECEIVE'
+C:/ST/STM32CubeIDE_1.13.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/bin/ld.exe: ./Core/Src/Bootloader.o:C:/Users/e0162112/STM32CubeIDE/workspace_1.13.0/ARM_Bootloader/Debug/../Core/Src/Bootloader.c:105: more undefined references to `UART_1_RECEIVE' follow
+C:/ST/STM32CubeIDE_1.13.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/bin/ld.exe: ./Core/Src/main.o: in function `UART_1_TRANSMIT':
+C:/Users/e0162112/STM32CubeIDE/workspace_1.13.0/ARM_Bootloader/Debug/../Core/Src/main.c:212: undefined reference to `GET_BIT'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:67: ARM_Bootloader.elf] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+20:06:20 **** Incremental Build of configuration Debug for project ARM_Bootloader ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/Bootloader.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/Bootloader.d" -MT"Core/Src/Bootloader.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/Bootloader.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/stm32f1xx_hal_msp.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f1xx_hal_msp.d" -MT"Core/Src/stm32f1xx_hal_msp.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/stm32f1xx_hal_msp.o"
+arm-none-eabi-gcc "../Core/Src/stm32f1xx_it.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f1xx_it.d" -MT"Core/Src/stm32f1xx_it.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/stm32f1xx_it.o"
+In file included from ../Core/Src/Bootloader.c:11:
+../Core/Inc/Bit_Math.h:9: warning: "SET_BIT" redefined
+    9 | #define SET_BIT(VAR,BIT)          VAR |=  (1 << (BIT))
+      | 
+In file included from ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h:29,
+                 from ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h:27,
+                 from ../Core/Inc/stm32f1xx_hal_conf.h:238,
+                 from ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/Bootloader.c:10:
+../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h:177: note: this is the location of the previous definition
+  177 | #define SET_BIT(REG, BIT)     ((REG) |= (BIT))
+      | 
+../Core/Src/Bootloader.c: In function 'Bootloader_main':
+../Core/Src/Bootloader.c:37:50: warning: statement with no effect [-Wunused-value]
+   37 |                                 BootLoader.state == BL_INITIALIZED;
+      |                                 ~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+../Core/Src/Bootloader.c:41:50: warning: statement with no effect [-Wunused-value]
+   41 |                                 BootLoader.state == BL_DONE;
+      |                                 ~~~~~~~~~~~~~~~~~^~~~~~~~~~
+../Core/Src/Bootloader.c:50:42: warning: statement with no effect [-Wunused-value]
+   50 |                         BootLoader.state == BL_DONE;
+      |                         ~~~~~~~~~~~~~~~~~^~~~~~~~~~
+../Core/Src/Bootloader.c:119:34: warning: statement with no effect [-Wunused-value]
+  119 |                 BootLoader.state == BL_RECEIVE_CHECKSUM_BYTE;
+      |                 ~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/Bootloader.c:154:41: warning: pointer targets in passing argument 1 of 'UART_1_TRANSMIT' differ in signedness [-Wpointer-sign]
+  154 |                         UART_1_TRANSMIT("ok");
+      |                                         ^~~~
+      |                                         |
+      |                                         char *
+In file included from ../Core/Src/Bootloader.c:10:
+../Core/Inc/main.h:64:30: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+   64 | void UART_1_TRANSMIT(uint8_t arr[]);
+      |                      ~~~~~~~~^~~~~
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:97:3: warning: implicit declaration of function 'Bootloader_Init'; did you mean 'Bootloader_main'? [-Wimplicit-function-declaration]
+   97 |   Bootloader_Init();
+      |   ^~~~~~~~~~~~~~~
+      |   Bootloader_main
+../Core/Src/main.c:98:11: warning: unused variable 'flag' [-Wunused-variable]
+   98 |   uint8_t flag = 0;
+      |           ^~~~
+../Core/Src/main.c: In function 'UART_1_TRANSMIT':
+../Core/Src/main.c:210:24: warning: implicit declaration of function 'GET_BIT'; did you mean 'SET_BIT'? [-Wimplicit-function-declaration]
+  210 |                 while((GET_BIT((USART1 -> SR), 6)) == 0);
+      |                        ^~~~~~~
+      |                        SET_BIT
+arm-none-eabi-gcc -o "ARM_Bootloader.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\e0162112\STM32CubeIDE\workspace_1.13.0\ARM_Bootloader\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ARM_Bootloader.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+C:/ST/STM32CubeIDE_1.13.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/bin/ld.exe: ./Core/Src/main.o:C:/Users/e0162112/STM32CubeIDE/workspace_1.13.0/ARM_Bootloader/Debug/../Core/Inc/main.h:56: multiple definition of `huart1'; ./Core/Src/Bootloader.o:C:/Users/e0162112/STM32CubeIDE/workspace_1.13.0/ARM_Bootloader/Debug/../Core/Inc/main.h:56: first defined here
+C:/ST/STM32CubeIDE_1.13.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/bin/ld.exe: ./Core/Src/stm32f1xx_hal_msp.o:C:/Users/e0162112/STM32CubeIDE/workspace_1.13.0/ARM_Bootloader/Debug/../Core/Inc/main.h:56: multiple definition of `huart1'; ./Core/Src/Bootloader.o:C:/Users/e0162112/STM32CubeIDE/workspace_1.13.0/ARM_Bootloader/Debug/../Core/Inc/main.h:56: first defined here
+C:/ST/STM32CubeIDE_1.13.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/bin/ld.exe: ./Core/Src/stm32f1xx_it.o:C:/Users/e0162112/STM32CubeIDE/workspace_1.13.0/ARM_Bootloader/Debug/../Core/Inc/main.h:56: multiple definition of `huart1'; ./Core/Src/Bootloader.o:C:/Users/e0162112/STM32CubeIDE/workspace_1.13.0/ARM_Bootloader/Debug/../Core/Inc/main.h:56: first defined here
+C:/ST/STM32CubeIDE_1.13.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/bin/ld.exe: ./Core/Src/main.o: in function `UART_1_TRANSMIT':
+C:/Users/e0162112/STM32CubeIDE/workspace_1.13.0/ARM_Bootloader/Debug/../Core/Src/main.c:210: undefined reference to `GET_BIT'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:67: ARM_Bootloader.elf] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+20:07:08 **** Incremental Build of configuration Debug for project ARM_Bootloader ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+In file included from ../Core/Src/main.c:21:
+../Core/Inc/Bit_Math.h:9: warning: "SET_BIT" redefined
+    9 | #define SET_BIT(VAR,BIT)          VAR |=  (1 << (BIT))
+      | 
+In file included from ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h:29,
+                 from ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h:27,
+                 from ../Core/Inc/stm32f1xx_hal_conf.h:238,
+                 from ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h:177: note: this is the location of the previous definition
+  177 | #define SET_BIT(REG, BIT)     ((REG) |= (BIT))
+      | 
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:97:3: warning: implicit declaration of function 'Bootloader_Init'; did you mean 'Bootloader_main'? [-Wimplicit-function-declaration]
+   97 |   Bootloader_Init();
+      |   ^~~~~~~~~~~~~~~
+      |   Bootloader_main
+../Core/Src/main.c:98:11: warning: unused variable 'flag' [-Wunused-variable]
+   98 |   uint8_t flag = 0;
+      |           ^~~~
+In file included from ../Core/Src/main.c:21:
+../Core/Src/main.c: In function 'MX_GPIO_Init':
+../Core/Inc/Bit_Math.h:9:46: warning: left shift count >= width of type [-Wshift-count-overflow]
+    9 | #define SET_BIT(VAR,BIT)          VAR |=  (1 << (BIT))
+      |                                              ^~
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h:527:41: note: in expansion of macro 'SET_BIT'
+  527 |                                         SET_BIT(RCC->APB2ENR, RCC_APB2ENR_IOPDEN);\
+      |                                         ^~~~~~~
+../Core/Src/main.c:196:3: note: in expansion of macro '__HAL_RCC_GPIOD_CLK_ENABLE'
+  196 |   __HAL_RCC_GPIOD_CLK_ENABLE();
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "ARM_Bootloader.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\e0162112\STM32CubeIDE\workspace_1.13.0\ARM_Bootloader\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ARM_Bootloader.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+C:/ST/STM32CubeIDE_1.13.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/bin/ld.exe: ./Core/Src/main.o:C:/Users/e0162112/STM32CubeIDE/workspace_1.13.0/ARM_Bootloader/Debug/../Core/Inc/main.h:56: multiple definition of `huart1'; ./Core/Src/Bootloader.o:C:/Users/e0162112/STM32CubeIDE/workspace_1.13.0/ARM_Bootloader/Debug/../Core/Inc/main.h:56: first defined here
+C:/ST/STM32CubeIDE_1.13.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/bin/ld.exe: ./Core/Src/stm32f1xx_hal_msp.o:C:/Users/e0162112/STM32CubeIDE/workspace_1.13.0/ARM_Bootloader/Debug/../Core/Inc/main.h:56: multiple definition of `huart1'; ./Core/Src/Bootloader.o:C:/Users/e0162112/STM32CubeIDE/workspace_1.13.0/ARM_Bootloader/Debug/../Core/Inc/main.h:56: first defined here
+C:/ST/STM32CubeIDE_1.13.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/bin/ld.exe: ./Core/Src/stm32f1xx_it.o:C:/Users/e0162112/STM32CubeIDE/workspace_1.13.0/ARM_Bootloader/Debug/../Core/Inc/main.h:56: multiple definition of `huart1'; ./Core/Src/Bootloader.o:C:/Users/e0162112/STM32CubeIDE/workspace_1.13.0/ARM_Bootloader/Debug/../Core/Inc/main.h:56: first defined here
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:67: ARM_Bootloader.elf] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+20:08:27 **** Incremental Build of configuration Debug for project ARM_Bootloader ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+In file included from ../Core/Src/main.c:49:
+../Core/Inc/Bit_Math.h:9: warning: "SET_BIT" redefined
+    9 | #define SET_BIT(VAR,BIT)          VAR |=  (1 << (BIT))
+      | 
+In file included from ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h:29,
+                 from ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h:27,
+                 from ../Core/Inc/stm32f1xx_hal_conf.h:238,
+                 from ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h:177: note: this is the location of the previous definition
+  177 | #define SET_BIT(REG, BIT)     ((REG) |= (BIT))
+      | 
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:97:3: warning: implicit declaration of function 'Bootloader_Init'; did you mean 'Bootloader_main'? [-Wimplicit-function-declaration]
+   97 |   Bootloader_Init();
+      |   ^~~~~~~~~~~~~~~
+      |   Bootloader_main
+../Core/Src/main.c:98:11: warning: unused variable 'flag' [-Wunused-variable]
+   98 |   uint8_t flag = 0;
+      |           ^~~~
+In file included from ../Core/Src/main.c:49:
+../Core/Src/main.c: In function 'MX_GPIO_Init':
+../Core/Inc/Bit_Math.h:9:46: warning: left shift count >= width of type [-Wshift-count-overflow]
+    9 | #define SET_BIT(VAR,BIT)          VAR |=  (1 << (BIT))
+      |                                              ^~
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h:527:41: note: in expansion of macro 'SET_BIT'
+  527 |                                         SET_BIT(RCC->APB2ENR, RCC_APB2ENR_IOPDEN);\
+      |                                         ^~~~~~~
+../Core/Src/main.c:196:3: note: in expansion of macro '__HAL_RCC_GPIOD_CLK_ENABLE'
+  196 |   __HAL_RCC_GPIOD_CLK_ENABLE();
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "ARM_Bootloader.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\e0162112\STM32CubeIDE\workspace_1.13.0\ARM_Bootloader\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ARM_Bootloader.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+C:/ST/STM32CubeIDE_1.13.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/bin/ld.exe: ./Core/Src/main.o:C:/Users/e0162112/STM32CubeIDE/workspace_1.13.0/ARM_Bootloader/Debug/../Core/Inc/main.h:56: multiple definition of `huart1'; ./Core/Src/Bootloader.o:C:/Users/e0162112/STM32CubeIDE/workspace_1.13.0/ARM_Bootloader/Debug/../Core/Inc/main.h:56: first defined here
+C:/ST/STM32CubeIDE_1.13.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/bin/ld.exe: ./Core/Src/stm32f1xx_hal_msp.o:C:/Users/e0162112/STM32CubeIDE/workspace_1.13.0/ARM_Bootloader/Debug/../Core/Inc/main.h:56: multiple definition of `huart1'; ./Core/Src/Bootloader.o:C:/Users/e0162112/STM32CubeIDE/workspace_1.13.0/ARM_Bootloader/Debug/../Core/Inc/main.h:56: first defined here
+C:/ST/STM32CubeIDE_1.13.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/bin/ld.exe: ./Core/Src/stm32f1xx_it.o:C:/Users/e0162112/STM32CubeIDE/workspace_1.13.0/ARM_Bootloader/Debug/../Core/Inc/main.h:56: multiple definition of `huart1'; ./Core/Src/Bootloader.o:C:/Users/e0162112/STM32CubeIDE/workspace_1.13.0/ARM_Bootloader/Debug/../Core/Inc/main.h:56: first defined here
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:67: ARM_Bootloader.elf] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+20:26:35 **** Incremental Build of configuration Debug for project ARM_Bootloader ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/Bootloader.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/Bootloader.d" -MT"Core/Src/Bootloader.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/Bootloader.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/stm32f1xx_hal_msp.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f1xx_hal_msp.d" -MT"Core/Src/stm32f1xx_hal_msp.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/stm32f1xx_hal_msp.o"
+arm-none-eabi-gcc "../Core/Src/stm32f1xx_it.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f1xx_it.d" -MT"Core/Src/stm32f1xx_it.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/stm32f1xx_it.o"
+In file included from ../Core/Src/main.c:51:
+../Core/Inc/Bit_Math.h:9: warning: "SET_BIT" redefined
+    9 | #define SET_BIT(VAR,BIT)          VAR |=  (1 << (BIT))
+      | 
+In file included from ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h:29,
+                 from ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h:27,
+                 from ../Core/Inc/stm32f1xx_hal_conf.h:238,
+                 from ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h:177: note: this is the location of the previous definition
+  177 | #define SET_BIT(REG, BIT)     ((REG) |= (BIT))
+      | 
+In file included from ../Core/Src/Bootloader.c:11:
+../Core/Inc/Bit_Math.h:9: warning: "SET_BIT" redefined
+    9 | #define SET_BIT(VAR,BIT)          VAR |=  (1 << (BIT))
+      | 
+In file included from ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h:29,
+                 from ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h:27,
+                 from ../Core/Inc/stm32f1xx_hal_conf.h:238,
+                 from ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/Bootloader.c:10:
+../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h:177: note: this is the location of the previous definition
+  177 | #define SET_BIT(REG, BIT)     ((REG) |= (BIT))
+      | 
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:99:3: warning: implicit declaration of function 'Bootloader_Init'; did you mean 'Bootloader_main'? [-Wimplicit-function-declaration]
+   99 |   Bootloader_Init();
+      |   ^~~~~~~~~~~~~~~
+      |   Bootloader_main
+../Core/Src/main.c:100:11: warning: unused variable 'flag' [-Wunused-variable]
+  100 |   uint8_t flag = 0;
+      |           ^~~~
+In file included from ../Core/Src/main.c:51:
+../Core/Src/main.c: In function 'MX_GPIO_Init':
+../Core/Inc/Bit_Math.h:9:46: warning: left shift count >= width of type [-Wshift-count-overflow]
+    9 | #define SET_BIT(VAR,BIT)          VAR |=  (1 << (BIT))
+      |                                              ^~
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h:527:41: note: in expansion of macro 'SET_BIT'
+  527 |                                         SET_BIT(RCC->APB2ENR, RCC_APB2ENR_IOPDEN);\
+      |                                         ^~~~~~~
+../Core/Src/main.c:198:3: note: in expansion of macro '__HAL_RCC_GPIOD_CLK_ENABLE'
+  198 |   __HAL_RCC_GPIOD_CLK_ENABLE();
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c: In function 'UART_1_RECEIVE':
+../Core/Src/main.c:227:38: warning: statement with no effect [-Wunused-value]
+  227 |                         timeout_flag == 1;
+      |                         ~~~~~~~~~~~~~^~~~
+../Core/Src/Bootloader.c: In function 'Bootloader_main':
+../Core/Src/Bootloader.c:33:25: warning: implicit declaration of function 'UART_1_RECEIVE'; did you mean 'USART_CR1_RXNEIE'? [-Wimplicit-function-declaration]
+   33 |                         UART_1_RECEIVE( &UART_RxData, 1, 10);
+      |                         ^~~~~~~~~~~~~~
+      |                         USART_CR1_RXNEIE
+../Core/Src/Bootloader.c:37:50: warning: statement with no effect [-Wunused-value]
+   37 |                                 BootLoader.state == BL_INITIALIZED;
+      |                                 ~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+../Core/Src/Bootloader.c:41:50: warning: statement with no effect [-Wunused-value]
+   41 |                                 BootLoader.state == BL_DONE;
+      |                                 ~~~~~~~~~~~~~~~~~^~~~~~~~~~
+../Core/Src/Bootloader.c:50:42: warning: statement with no effect [-Wunused-value]
+   50 |                         BootLoader.state == BL_DONE;
+      |                         ~~~~~~~~~~~~~~~~~^~~~~~~~~~
+../Core/Src/Bootloader.c:119:34: warning: statement with no effect [-Wunused-value]
+  119 |                 BootLoader.state == BL_RECEIVE_CHECKSUM_BYTE;
+      |                 ~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/Bootloader.c:154:41: warning: pointer targets in passing argument 1 of 'UART_1_TRANSMIT' differ in signedness [-Wpointer-sign]
+  154 |                         UART_1_TRANSMIT("ok");
+      |                                         ^~~~
+      |                                         |
+      |                                         char *
+In file included from ../Core/Src/Bootloader.c:10:
+../Core/Inc/main.h:62:30: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+   62 | void UART_1_TRANSMIT(uint8_t arr[]);
+      |                      ~~~~~~~~^~~~~
+arm-none-eabi-gcc -o "ARM_Bootloader.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\e0162112\STM32CubeIDE\workspace_1.13.0\ARM_Bootloader\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ARM_Bootloader.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ARM_Bootloader.elf
+ 
+arm-none-eabi-size   ARM_Bootloader.elf 
+arm-none-eabi-objdump -h -S  ARM_Bootloader.elf  > "ARM_Bootloader.list"
+   text	   data	    bss	    dec	    hex	filename
+   6376	     20	   1660	   8056	   1f78	ARM_Bootloader.elf
+arm-none-eabi-objcopy  -O ihex  ARM_Bootloader.elf  "ARM_Bootloader.hex"
+Finished building: default.size.stdout
+ 
+Finished building: ARM_Bootloader.list
+Finished building: ARM_Bootloader.hex
+ 
+ 
+20:27:23 **** Incremental Build of configuration Debug for project ARM_Bootloader ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/Bootloader.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/Bootloader.d" -MT"Core/Src/Bootloader.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/Bootloader.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/stm32f1xx_hal_msp.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f1xx_hal_msp.d" -MT"Core/Src/stm32f1xx_hal_msp.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/stm32f1xx_hal_msp.o"
+arm-none-eabi-gcc "../Core/Src/stm32f1xx_it.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f1xx_it.d" -MT"Core/Src/stm32f1xx_it.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/stm32f1xx_it.o"
+In file included from ../Core/Src/Bootloader.c:11:
+../Core/Inc/Bit_Math.h:9: warning: "SET_BIT" redefined
+    9 | #define SET_BIT(VAR,BIT)          VAR |=  (1 << (BIT))
+      | 
+In file included from ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h:29,
+                 from ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h:27,
+                 from ../Core/Inc/stm32f1xx_hal_conf.h:238,
+                 from ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/Bootloader.c:10:
+../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h:177: note: this is the location of the previous definition
+  177 | #define SET_BIT(REG, BIT)     ((REG) |= (BIT))
+      | 
+../Core/Src/Bootloader.c: In function 'Bootloader_main':
+../Core/Src/Bootloader.c:33:25: error: too many arguments to function 'UART_1_RECEIVE'
+   33 |                         UART_1_RECEIVE( &UART_RxData, 1, 10);
+      |                         ^~~~~~~~~~~~~~
+In file included from ../Core/Src/Bootloader.c:10:
+../Core/Inc/main.h:63:9: note: declared here
+   63 | uint8_t UART_1_RECEIVE( uint8_t * data , uint16_t timeout);
+      |         ^~~~~~~~~~~~~~
+../Core/Src/Bootloader.c:37:50: warning: statement with no effect [-Wunused-value]
+   37 |                                 BootLoader.state == BL_INITIALIZED;
+      |                                 ~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+../Core/Src/Bootloader.c:41:50: warning: statement with no effect [-Wunused-value]
+   41 |                                 BootLoader.state == BL_DONE;
+      |                                 ~~~~~~~~~~~~~~~~~^~~~~~~~~~
+../Core/Src/Bootloader.c:50:42: warning: statement with no effect [-Wunused-value]
+   50 |                         BootLoader.state == BL_DONE;
+      |                         ~~~~~~~~~~~~~~~~~^~~~~~~~~~
+../Core/Src/Bootloader.c:65:17: error: too many arguments to function 'UART_1_RECEIVE'
+   65 |                 UART_1_RECEIVE( &UART_RxData, 1, 10);
+      |                 ^~~~~~~~~~~~~~
+In file included from ../Core/Src/Bootloader.c:10:
+../Core/Inc/main.h:63:9: note: declared here
+   63 | uint8_t UART_1_RECEIVE( uint8_t * data , uint16_t timeout);
+      |         ^~~~~~~~~~~~~~
+../Core/Src/Bootloader.c:73:17: error: too many arguments to function 'UART_1_RECEIVE'
+   73 |                 UART_1_RECEIVE( &UART_RxData, 1, 10); //receive higher byte of address
+      |                 ^~~~~~~~~~~~~~
+In file included from ../Core/Src/Bootloader.c:10:
+../Core/Inc/main.h:63:9: note: declared here
+   63 | uint8_t UART_1_RECEIVE( uint8_t * data , uint16_t timeout);
+      |         ^~~~~~~~~~~~~~
+../Core/Src/Bootloader.c:77:17: error: too many arguments to function 'UART_1_RECEIVE'
+   77 |                 UART_1_RECEIVE( &UART_RxData, 1, 10);   //receive lower byte of address
+      |                 ^~~~~~~~~~~~~~
+In file included from ../Core/Src/Bootloader.c:10:
+../Core/Inc/main.h:63:9: note: declared here
+   63 | uint8_t UART_1_RECEIVE( uint8_t * data , uint16_t timeout);
+      |         ^~~~~~~~~~~~~~
+../Core/Src/Bootloader.c:86:17: error: too many arguments to function 'UART_1_RECEIVE'
+   86 |                 UART_1_RECEIVE( &UART_RxData, 1, 10); //receive type byte
+      |                 ^~~~~~~~~~~~~~
+In file included from ../Core/Src/Bootloader.c:10:
+../Core/Inc/main.h:63:9: note: declared here
+   63 | uint8_t UART_1_RECEIVE( uint8_t * data , uint16_t timeout);
+      |         ^~~~~~~~~~~~~~
+../Core/Src/Bootloader.c:105:20: error: too many arguments to function 'UART_1_RECEIVE'
+  105 |                 if(UART_1_RECEIVE( &UART_RxData, 1, 10))
+      |                    ^~~~~~~~~~~~~~
+In file included from ../Core/Src/Bootloader.c:10:
+../Core/Inc/main.h:63:9: note: declared here
+   63 | uint8_t UART_1_RECEIVE( uint8_t * data , uint16_t timeout);
+      |         ^~~~~~~~~~~~~~
+../Core/Src/Bootloader.c:111:20: error: too many arguments to function 'UART_1_RECEIVE'
+  111 |                 if(UART_1_RECEIVE( &UART_RxData, 1, 10))
+      |                    ^~~~~~~~~~~~~~
+In file included from ../Core/Src/Bootloader.c:10:
+../Core/Inc/main.h:63:9: note: declared here
+   63 | uint8_t UART_1_RECEIVE( uint8_t * data , uint16_t timeout);
+      |         ^~~~~~~~~~~~~~
+../Core/Src/Bootloader.c:119:34: warning: statement with no effect [-Wunused-value]
+  119 |                 BootLoader.state == BL_RECEIVE_CHECKSUM_BYTE;
+      |                 ~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from ../Core/Src/main.c:51:
+../Core/Inc/Bit_Math.h:9: warning: "SET_BIT" redefined
+    9 | #define SET_BIT(VAR,BIT)          VAR |=  (1 << (BIT))
+      | 
+../Core/Src/Bootloader.c:130:25: error: too many arguments to function 'UART_1_RECEIVE'
+  130 |                         UART_1_RECEIVE( &UART_RxData, 1, 10);
+      |                         ^~~~~~~~~~~~~~
+In file included from ../Core/Src/Bootloader.c:10:
+../Core/Inc/main.h:63:9: note: declared here
+   63 | uint8_t UART_1_RECEIVE( uint8_t * data , uint16_t timeout);
+      |         ^~~~~~~~~~~~~~
+In file included from ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h:29,
+                 from ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h:27,
+                 from ../Core/Inc/stm32f1xx_hal_conf.h:238,
+                 from ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h:177: note: this is the location of the previous definition
+  177 | #define SET_BIT(REG, BIT)     ((REG) |= (BIT))
+      | 
+../Core/Src/Bootloader.c:134:25: error: too many arguments to function 'UART_1_RECEIVE'
+  134 |                         UART_1_RECEIVE( &UART_RxData, 1, 10);
+      |                         ^~~~~~~~~~~~~~
+In file included from ../Core/Src/Bootloader.c:10:
+../Core/Inc/main.h:63:9: note: declared here
+   63 | uint8_t UART_1_RECEIVE( uint8_t * data , uint16_t timeout);
+      |         ^~~~~~~~~~~~~~
+../Core/Src/Bootloader.c:148:17: error: too many arguments to function 'UART_1_RECEIVE'
+  148 |                 UART_1_RECEIVE( &UART_RxData, 1, 10);
+      |                 ^~~~~~~~~~~~~~
+In file included from ../Core/Src/Bootloader.c:10:
+../Core/Inc/main.h:63:9: note: declared here
+   63 | uint8_t UART_1_RECEIVE( uint8_t * data , uint16_t timeout);
+      |         ^~~~~~~~~~~~~~
+../Core/Src/Bootloader.c:154:41: warning: pointer targets in passing argument 1 of 'UART_1_TRANSMIT' differ in signedness [-Wpointer-sign]
+  154 |                         UART_1_TRANSMIT("ok");
+      |                                         ^~~~
+      |                                         |
+      |                                         char *
+In file included from ../Core/Src/Bootloader.c:10:
+../Core/Inc/main.h:62:30: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+   62 | void UART_1_TRANSMIT(uint8_t arr[]);
+      |                      ~~~~~~~~^~~~~
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:99:3: warning: implicit declaration of function 'Bootloader_Init'; did you mean 'Bootloader_main'? [-Wimplicit-function-declaration]
+   99 |   Bootloader_Init();
+      |   ^~~~~~~~~~~~~~~
+      |   Bootloader_main
+../Core/Src/main.c:100:11: warning: unused variable 'flag' [-Wunused-variable]
+  100 |   uint8_t flag = 0;
+      |           ^~~~
+In file included from ../Core/Src/main.c:51:
+../Core/Src/main.c: In function 'MX_GPIO_Init':
+../Core/Inc/Bit_Math.h:9:46: warning: left shift count >= width of type [-Wshift-count-overflow]
+    9 | #define SET_BIT(VAR,BIT)          VAR |=  (1 << (BIT))
+      |                                              ^~
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h:527:41: note: in expansion of macro 'SET_BIT'
+  527 |                                         SET_BIT(RCC->APB2ENR, RCC_APB2ENR_IOPDEN);\
+      |                                         ^~~~~~~
+../Core/Src/main.c:198:3: note: in expansion of macro '__HAL_RCC_GPIOD_CLK_ENABLE'
+  198 |   __HAL_RCC_GPIOD_CLK_ENABLE();
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c: In function 'UART_1_RECEIVE':
+../Core/Src/main.c:227:38: warning: statement with no effect [-Wunused-value]
+  227 |                         timeout_flag == 1;
+      |                         ~~~~~~~~~~~~~^~~~
+make: *** [Core/Src/subdir.mk:37: Core/Src/Bootloader.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+20:28:21 **** Incremental Build of configuration Debug for project ARM_Bootloader ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/Bootloader.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/Bootloader.d" -MT"Core/Src/Bootloader.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/Bootloader.o"
+In file included from ../Core/Src/Bootloader.c:11:
+../Core/Inc/Bit_Math.h:9: warning: "SET_BIT" redefined
+    9 | #define SET_BIT(VAR,BIT)          VAR |=  (1 << (BIT))
+      | 
+In file included from ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h:29,
+                 from ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h:27,
+                 from ../Core/Inc/stm32f1xx_hal_conf.h:238,
+                 from ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/Bootloader.c:10:
+../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h:177: note: this is the location of the previous definition
+  177 | #define SET_BIT(REG, BIT)     ((REG) |= (BIT))
+      | 
+../Core/Src/Bootloader.c: In function 'Bootloader_main':
+../Core/Src/Bootloader.c:37:50: warning: statement with no effect [-Wunused-value]
+   37 |                                 BootLoader.state == BL_INITIALIZED;
+      |                                 ~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+../Core/Src/Bootloader.c:41:50: warning: statement with no effect [-Wunused-value]
+   41 |                                 BootLoader.state == BL_DONE;
+      |                                 ~~~~~~~~~~~~~~~~~^~~~~~~~~~
+../Core/Src/Bootloader.c:50:42: warning: statement with no effect [-Wunused-value]
+   50 |                         BootLoader.state == BL_DONE;
+      |                         ~~~~~~~~~~~~~~~~~^~~~~~~~~~
+../Core/Src/Bootloader.c:105:20: error: too many arguments to function 'UART_1_RECEIVE'
+  105 |                 if(UART_1_RECEIVE( &UART_RxData, 1, 10))
+      |                    ^~~~~~~~~~~~~~
+In file included from ../Core/Src/Bootloader.c:10:
+../Core/Inc/main.h:63:9: note: declared here
+   63 | uint8_t UART_1_RECEIVE( uint8_t * data , uint16_t timeout);
+      |         ^~~~~~~~~~~~~~
+../Core/Src/Bootloader.c:111:20: error: too many arguments to function 'UART_1_RECEIVE'
+  111 |                 if(UART_1_RECEIVE( &UART_RxData, 1, 10))
+      |                    ^~~~~~~~~~~~~~
+In file included from ../Core/Src/Bootloader.c:10:
+../Core/Inc/main.h:63:9: note: declared here
+   63 | uint8_t UART_1_RECEIVE( uint8_t * data , uint16_t timeout);
+      |         ^~~~~~~~~~~~~~
+../Core/Src/Bootloader.c:119:34: warning: statement with no effect [-Wunused-value]
+  119 |                 BootLoader.state == BL_RECEIVE_CHECKSUM_BYTE;
+      |                 ~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/Bootloader.c:154:41: warning: pointer targets in passing argument 1 of 'UART_1_TRANSMIT' differ in signedness [-Wpointer-sign]
+  154 |                         UART_1_TRANSMIT("ok");
+      |                                         ^~~~
+      |                                         |
+      |                                         char *
+In file included from ../Core/Src/Bootloader.c:10:
+../Core/Inc/main.h:62:30: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+   62 | void UART_1_TRANSMIT(uint8_t arr[]);
+      |                      ~~~~~~~~^~~~~
+make: *** [Core/Src/subdir.mk:37: Core/Src/Bootloader.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+20:30:04 **** Incremental Build of configuration Debug for project ARM_Bootloader ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/Bootloader.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/Bootloader.d" -MT"Core/Src/Bootloader.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/Bootloader.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+In file included from ../Core/Src/Bootloader.c:11:
+../Core/Inc/Bit_Math.h:9: warning: "SET_BIT" redefined
+    9 | #define SET_BIT(VAR,BIT)          VAR |=  (1 << (BIT))
+      | 
+In file included from ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h:29,
+                 from ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h:27,
+                 from ../Core/Inc/stm32f1xx_hal_conf.h:238,
+                 from ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/Bootloader.c:10:
+../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h:177: note: this is the location of the previous definition
+  177 | #define SET_BIT(REG, BIT)     ((REG) |= (BIT))
+      | 
+../Core/Src/Bootloader.c: In function 'Bootloader_main':
+../Core/Src/Bootloader.c:37:50: warning: statement with no effect [-Wunused-value]
+   37 |                                 BootLoader.state == BL_INITIALIZED;
+      |                                 ~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+../Core/Src/Bootloader.c:41:50: warning: statement with no effect [-Wunused-value]
+   41 |                                 BootLoader.state == BL_DONE;
+      |                                 ~~~~~~~~~~~~~~~~~^~~~~~~~~~
+../Core/Src/Bootloader.c:50:42: warning: statement with no effect [-Wunused-value]
+   50 |                         BootLoader.state == BL_DONE;
+      |                         ~~~~~~~~~~~~~~~~~^~~~~~~~~~
+../Core/Src/Bootloader.c:105:20: error: too many arguments to function 'UART_1_RECEIVE'
+  105 |                 if(UART_1_RECEIVE( &UART_RxData, 1, 10))
+      |                    ^~~~~~~~~~~~~~
+In file included from ../Core/Src/Bootloader.c:10:
+../Core/Inc/main.h:63:9: note: declared here
+   63 | uint8_t UART_1_RECEIVE( uint8_t * data , uint16_t timeout);
+      |         ^~~~~~~~~~~~~~
+../Core/Src/Bootloader.c:111:20: error: too many arguments to function 'UART_1_RECEIVE'
+  111 |                 if(UART_1_RECEIVE( &UART_RxData, 1, 10))
+      |                    ^~~~~~~~~~~~~~
+In file included from ../Core/Src/Bootloader.c:10:
+../Core/Inc/main.h:63:9: note: declared here
+   63 | uint8_t UART_1_RECEIVE( uint8_t * data , uint16_t timeout);
+      |         ^~~~~~~~~~~~~~
+../Core/Src/Bootloader.c:119:34: warning: statement with no effect [-Wunused-value]
+  119 |                 BootLoader.state == BL_RECEIVE_CHECKSUM_BYTE;
+      |                 ~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/Bootloader.c:154:41: warning: pointer targets in passing argument 1 of 'UART_1_TRANSMIT' differ in signedness [-Wpointer-sign]
+  154 |                         UART_1_TRANSMIT("ok");
+      |                                         ^~~~
+      |                                         |
+      |                                         char *
+In file included from ../Core/Src/Bootloader.c:10:
+../Core/Inc/main.h:62:30: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+   62 | void UART_1_TRANSMIT(uint8_t arr[]);
+      |                      ~~~~~~~~^~~~~
+In file included from ../Core/Src/main.c:50:
+../Core/Inc/Bit_Math.h:9: warning: "SET_BIT" redefined
+    9 | #define SET_BIT(VAR,BIT)          VAR |=  (1 << (BIT))
+      | 
+In file included from ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h:29,
+                 from ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h:27,
+                 from ../Core/Inc/stm32f1xx_hal_conf.h:238,
+                 from ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h:177: note: this is the location of the previous definition
+  177 | #define SET_BIT(REG, BIT)     ((REG) |= (BIT))
+      | 
+make: *** [Core/Src/subdir.mk:37: Core/Src/Bootloader.o] Error 1
+make: *** Waiting for unfinished jobs....
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:98:3: warning: implicit declaration of function 'Bootloader_Init'; did you mean 'Bootloader_main'? [-Wimplicit-function-declaration]
+   98 |   Bootloader_Init();
+      |   ^~~~~~~~~~~~~~~
+      |   Bootloader_main
+../Core/Src/main.c:99:11: warning: unused variable 'flag' [-Wunused-variable]
+   99 |   uint8_t flag = 0;
+      |           ^~~~
+In file included from ../Core/Src/main.c:50:
+../Core/Src/main.c: In function 'MX_GPIO_Init':
+../Core/Inc/Bit_Math.h:9:46: warning: left shift count >= width of type [-Wshift-count-overflow]
+    9 | #define SET_BIT(VAR,BIT)          VAR |=  (1 << (BIT))
+      |                                              ^~
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h:527:41: note: in expansion of macro 'SET_BIT'
+  527 |                                         SET_BIT(RCC->APB2ENR, RCC_APB2ENR_IOPDEN);\
+      |                                         ^~~~~~~
+../Core/Src/main.c:197:3: note: in expansion of macro '__HAL_RCC_GPIOD_CLK_ENABLE'
+  197 |   __HAL_RCC_GPIOD_CLK_ENABLE();
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c: In function 'UART_1_RECEIVE':
+../Core/Src/main.c:227:38: warning: statement with no effect [-Wunused-value]
+  227 |                         timeout_flag == 1;
+      |                         ~~~~~~~~~~~~~^~~~
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+20:30:44 **** Incremental Build of configuration Debug for project ARM_Bootloader ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/Bootloader.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/Bootloader.d" -MT"Core/Src/Bootloader.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/Bootloader.o"
+In file included from ../Core/Src/Bootloader.c:11:
+../Core/Inc/Bit_Math.h:9: warning: "SET_BIT" redefined
+    9 | #define SET_BIT(VAR,BIT)          VAR |=  (1 << (BIT))
+      | 
+In file included from ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h:29,
+                 from ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h:27,
+                 from ../Core/Inc/stm32f1xx_hal_conf.h:238,
+                 from ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/Bootloader.c:10:
+../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h:177: note: this is the location of the previous definition
+  177 | #define SET_BIT(REG, BIT)     ((REG) |= (BIT))
+      | 
+../Core/Src/Bootloader.c: In function 'Bootloader_main':
+../Core/Src/Bootloader.c:37:50: warning: statement with no effect [-Wunused-value]
+   37 |                                 BootLoader.state == BL_INITIALIZED;
+      |                                 ~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+../Core/Src/Bootloader.c:41:50: warning: statement with no effect [-Wunused-value]
+   41 |                                 BootLoader.state == BL_DONE;
+      |                                 ~~~~~~~~~~~~~~~~~^~~~~~~~~~
+../Core/Src/Bootloader.c:50:42: warning: statement with no effect [-Wunused-value]
+   50 |                         BootLoader.state == BL_DONE;
+      |                         ~~~~~~~~~~~~~~~~~^~~~~~~~~~
+../Core/Src/Bootloader.c:119:34: warning: statement with no effect [-Wunused-value]
+  119 |                 BootLoader.state == BL_RECEIVE_CHECKSUM_BYTE;
+      |                 ~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/Bootloader.c:154:41: warning: pointer targets in passing argument 1 of 'UART_1_TRANSMIT' differ in signedness [-Wpointer-sign]
+  154 |                         UART_1_TRANSMIT("ok");
+      |                                         ^~~~
+      |                                         |
+      |                                         char *
+In file included from ../Core/Src/Bootloader.c:10:
+../Core/Inc/main.h:62:30: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+   62 | void UART_1_TRANSMIT(uint8_t arr[]);
+      |                      ~~~~~~~~^~~~~
+arm-none-eabi-gcc -o "ARM_Bootloader.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\e0162112\STM32CubeIDE\workspace_1.13.0\ARM_Bootloader\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ARM_Bootloader.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ARM_Bootloader.elf
+ 
+arm-none-eabi-size   ARM_Bootloader.elf 
+arm-none-eabi-objdump -h -S  ARM_Bootloader.elf  > "ARM_Bootloader.list"
+   text	   data	    bss	    dec	    hex	filename
+   6356	     20	   1660	   8036	   1f64	ARM_Bootloader.elf
+arm-none-eabi-objcopy  -O ihex  ARM_Bootloader.elf  "ARM_Bootloader.hex"
+Finished building: default.size.stdout
+ 
+Finished building: ARM_Bootloader.list
+Finished building: ARM_Bootloader.hex
+ 
+ 
+20:30:54 **** Incremental Build of configuration Debug for project ARM_Bootloader ****
+make -j8 all 
+arm-none-eabi-size   ARM_Bootloader.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6356	     20	   1660	   8036	   1f64	ARM_Bootloader.elf
+Finished building: default.size.stdout
+ 

@@ -1,0 +1,65 @@
+2023-09-26 20:14:32,667 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2023-09-26 20:15:34,489 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 987197264 Bytes (1073741824)
+2023-09-26 20:15:36,128 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 857904024 Bytes (1073741824)
+2023-09-26 20:15:36,796 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: NVIC
+2023-09-26 20:15:36,796 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: USART
+2023-09-26 20:15:36,797 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SYS
+2023-09-26 20:15:36,797 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: GPIO
+2023-09-26 20:15:36,797 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: RCC
+2023-09-26 20:15:36,807 [INFO] CodeGenerator:799 - code generatio: config db path: C:\ST\STM32CubeIDE_1.13.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.9.0.202307051724\\db\
+2023-09-26 20:15:37,359 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\e0162112\STM32CubeIDE\workspace_1.13.0\Bootloader\MXTmpFiles\license.tmp_save
+2023-09-26 20:15:37,627 [INFO] CodeEngine:279 - Generated code: C:\Users\e0162112\STM32CubeIDE\workspace_1.13.0\Bootloader\MXTmpFiles\license.tmp
+2023-09-26 20:15:37,709 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\e0162112\STM32CubeIDE\workspace_1.13.0\Bootloader\MXTmpFiles\gpio.tmp_save
+2023-09-26 20:15:37,919 [INFO] CodeEngine:279 - Generated code: C:\Users\e0162112\STM32CubeIDE\workspace_1.13.0\Bootloader\MXTmpFiles\gpio.tmp
+2023-09-26 20:15:38,071 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\e0162112\STM32CubeIDE\workspace_1.13.0\Bootloader\Core\Src\stm32f1xx_it.c_save
+2023-09-26 20:15:38,371 [INFO] CodeEngine:279 - Generated code: C:\Users\e0162112\STM32CubeIDE\workspace_1.13.0\Bootloader\Core\Src\stm32f1xx_it.c
+2023-09-26 20:15:38,405 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\e0162112\STM32CubeIDE\workspace_1.13.0\Bootloader\Core\Inc\stm32f1xx_it.h_save
+2023-09-26 20:15:38,531 [INFO] CodeEngine:279 - Generated code: C:\Users\e0162112\STM32CubeIDE\workspace_1.13.0\Bootloader\Core\Inc\stm32f1xx_it.h
+2023-09-26 20:15:38,614 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\e0162112\STM32CubeIDE\workspace_1.13.0\Bootloader\Core\Src\stm32f1xx_hal_msp.c_save
+2023-09-26 20:15:38,903 [INFO] CodeEngine:279 - Generated code: C:\Users\e0162112\STM32CubeIDE\workspace_1.13.0\Bootloader\Core\Src\stm32f1xx_hal_msp.c
+2023-09-26 20:15:38,932 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\e0162112\STM32CubeIDE\workspace_1.13.0\Bootloader\MXTmpFiles\system.tmp_save
+2023-09-26 20:15:39,040 [INFO] CodeEngine:279 - Generated code: C:\Users\e0162112\STM32CubeIDE\workspace_1.13.0\Bootloader\MXTmpFiles\system.tmp
+2023-09-26 20:15:39,110 [INFO] CodeEngine:311 - oldGeneratedFile, C:\Users\e0162112\STM32CubeIDE\workspace_1.13.0\Bootloader\Core\Inc\stm32f1xx_hal_conf.h_save
+2023-09-26 20:15:39,321 [INFO] CodeEngine:335 - Generated code: C:\Users\e0162112\STM32CubeIDE\workspace_1.13.0\Bootloader\Core\Inc\stm32f1xx_hal_conf.h
+2023-09-26 20:15:39,408 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\e0162112\STM32CubeIDE\workspace_1.13.0\Bootloader\Core\Inc\main.h_save
+2023-09-26 20:15:39,580 [INFO] CodeEngine:279 - Generated code: C:\Users\e0162112\STM32CubeIDE\workspace_1.13.0\Bootloader\Core\Inc\main.h
+2023-09-26 20:15:39,616 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\e0162112\STM32CubeIDE\workspace_1.13.0\Bootloader\Core\Src\main.c_save
+2023-09-26 20:15:39,830 [INFO] CodeEngine:279 - Generated code: C:\Users\e0162112\STM32CubeIDE\workspace_1.13.0\Bootloader\Core\Src\main.c
+2023-09-26 20:15:41,636 [INFO] ProjectBuilder:3064 - Time for Copy HAL[1] : 883mS.
+2023-09-26 20:15:41,645 [INFO] ProjectBuilder:4404 - Project Generator version: 4.1.0
+2023-09-26 20:15:42,001 [INFO] ConfigFileManager:1457 - The Die is : DIE410
+2023-09-26 20:15:46,788 [INFO] ProjectBuilder:4626 - Time for Generating toolchain IDE Files: 5142mS.
+2023-09-26 20:15:46,795 [INFO] ProjectBuilder:2935 - Time for Copy CMSIS : 7mS.
+2023-09-26 20:15:46,810 [INFO] ProjectBuilder:2935 - Time for Copy CMSIS : 0mS.
+2023-09-26 20:50:25,295 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 578100712 Bytes (1073741824)
+2023-09-26 20:50:25,615 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 584907544 Bytes (1073741824)
+2023-09-26 20:50:27,786 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 700250904 Bytes (1073741824)
+2023-09-26 20:50:28,420 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: NVIC
+2023-09-26 20:50:28,420 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SYS
+2023-09-26 20:50:28,421 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: GPIO
+2023-09-26 20:50:28,422 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: RCC
+2023-09-26 20:50:28,432 [INFO] CodeGenerator:799 - code generatio: config db path: C:\ST\STM32CubeIDE_1.13.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.9.0.202307051724\\db\
+2023-09-26 20:50:28,774 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\e0162112\STM32CubeIDE\workspace_1.13.0\Bootloader\MXTmpFiles\license.tmp_save
+2023-09-26 20:50:29,044 [INFO] CodeEngine:279 - Generated code: C:\Users\e0162112\STM32CubeIDE\workspace_1.13.0\Bootloader\MXTmpFiles\license.tmp
+2023-09-26 20:50:29,155 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\e0162112\STM32CubeIDE\workspace_1.13.0\Bootloader\MXTmpFiles\gpio.tmp_save
+2023-09-26 20:50:29,434 [INFO] CodeEngine:279 - Generated code: C:\Users\e0162112\STM32CubeIDE\workspace_1.13.0\Bootloader\MXTmpFiles\gpio.tmp
+2023-09-26 20:50:29,520 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\e0162112\STM32CubeIDE\workspace_1.13.0\Bootloader\Core\Src\stm32f1xx_it.c_save
+2023-09-26 20:50:30,257 [INFO] CodeEngine:279 - Generated code: C:\Users\e0162112\STM32CubeIDE\workspace_1.13.0\Bootloader\Core\Src\stm32f1xx_it.c
+2023-09-26 20:50:30,311 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\e0162112\STM32CubeIDE\workspace_1.13.0\Bootloader\Core\Inc\stm32f1xx_it.h_save
+2023-09-26 20:50:30,567 [INFO] CodeEngine:279 - Generated code: C:\Users\e0162112\STM32CubeIDE\workspace_1.13.0\Bootloader\Core\Inc\stm32f1xx_it.h
+2023-09-26 20:50:30,642 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\e0162112\STM32CubeIDE\workspace_1.13.0\Bootloader\Core\Src\stm32f1xx_hal_msp.c_save
+2023-09-26 20:50:30,959 [INFO] CodeEngine:279 - Generated code: C:\Users\e0162112\STM32CubeIDE\workspace_1.13.0\Bootloader\Core\Src\stm32f1xx_hal_msp.c
+2023-09-26 20:50:31,017 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\e0162112\STM32CubeIDE\workspace_1.13.0\Bootloader\MXTmpFiles\system.tmp_save
+2023-09-26 20:50:31,209 [INFO] CodeEngine:279 - Generated code: C:\Users\e0162112\STM32CubeIDE\workspace_1.13.0\Bootloader\MXTmpFiles\system.tmp
+2023-09-26 20:50:31,277 [INFO] CodeEngine:311 - oldGeneratedFile, C:\Users\e0162112\STM32CubeIDE\workspace_1.13.0\Bootloader\Core\Inc\stm32f1xx_hal_conf.h_save
+2023-09-26 20:50:31,532 [INFO] CodeEngine:335 - Generated code: C:\Users\e0162112\STM32CubeIDE\workspace_1.13.0\Bootloader\Core\Inc\stm32f1xx_hal_conf.h
+2023-09-26 20:50:31,690 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\e0162112\STM32CubeIDE\workspace_1.13.0\Bootloader\Core\Inc\main.h_save
+2023-09-26 20:50:31,922 [INFO] CodeEngine:279 - Generated code: C:\Users\e0162112\STM32CubeIDE\workspace_1.13.0\Bootloader\Core\Inc\main.h
+2023-09-26 20:50:31,968 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\e0162112\STM32CubeIDE\workspace_1.13.0\Bootloader\Core\Src\main.c_save
+2023-09-26 20:50:32,381 [INFO] CodeEngine:279 - Generated code: C:\Users\e0162112\STM32CubeIDE\workspace_1.13.0\Bootloader\Core\Src\main.c
+2023-09-26 20:50:35,314 [INFO] ProjectBuilder:3064 - Time for Copy HAL[1] : 1293mS.
+2023-09-26 20:50:35,329 [INFO] ProjectBuilder:4404 - Project Generator version: 4.1.0
+2023-09-26 20:50:35,845 [INFO] ConfigFileManager:1457 - The Die is : DIE410
+2023-09-26 20:50:44,405 [INFO] ProjectBuilder:4626 - Time for Generating toolchain IDE Files: 9075mS.
+2023-09-26 20:50:44,412 [INFO] ProjectBuilder:2935 - Time for Copy CMSIS : 6mS.
+2023-09-26 20:50:44,429 [INFO] ProjectBuilder:2935 - Time for Copy CMSIS : 0mS.

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;ARM/Core/Inc/Bit_Math&apos; to &apos;Bit_Math.h&apos;" description="Rename resource &apos;Bit_Math&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Core/Inc/Bit_Math" name="Bit_Math.h" stamp="1694629369482" updateReferences="true"/>
+</session>
