@@ -1,0 +1,27 @@
+11:59:14 **** Incremental Build of configuration Debug for project ARM-FreeRTOS ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I"C:/Users/e0162112/STM32CubeIDE/workspace_1.13.0/ARM-FreeRTOS/Drivers/Third Party/FreeRTOS/portable/GCC/ARM_CM3" -I"C:/Users/e0162112/STM32CubeIDE/workspace_1.13.0/ARM-FreeRTOS/Drivers/Third Party/FreeRTOS/portable/MemMang" -I"C:/Users/e0162112/STM32CubeIDE/workspace_1.13.0/ARM-FreeRTOS/Drivers/Third Party/FreeRTOS/include" -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:91:24: warning: passing argument 1 of 'xTaskCreate' from incompatible pointer type [-Wincompatible-pointer-types]
+   91 |   status = xTaskCreate(Task_1, "Task_1", 4, "Hello world from task-1", 4, &Task_1_handle);
+      |                        ^~~~~~
+      |                        |
+      |                        void (*)(void)
+In file included from ../Core/Src/main.c:25:
+C:/Users/e0162112/STM32CubeIDE/workspace_1.13.0/ARM-FreeRTOS/Drivers/Third Party/FreeRTOS/include/task.h:355:44: note: expected 'TaskFunction_t' {aka 'void (*)(void *)'} but argument is of type 'void (*)(void)'
+  355 |     BaseType_t xTaskCreate( TaskFunction_t pxTaskCode,
+      |                             ~~~~~~~~~~~~~~~^~~~~~~~~~
+arm-none-eabi-gcc -o "ARM-FreeRTOS.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\e0162112\STM32CubeIDE\workspace_1.13.0\ARM-FreeRTOS\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ARM-FreeRTOS.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ARM-FreeRTOS.elf
+ 
+arm-none-eabi-size   ARM-FreeRTOS.elf 
+arm-none-eabi-objdump -h -S  ARM-FreeRTOS.elf  > "ARM-FreeRTOS.list"
+   text	   data	    bss	    dec	    hex	filename
+   9124	     24	  20360	  29508	   7344	ARM-FreeRTOS.elf
+Finished building: default.size.stdout
+ 
+Finished building: ARM-FreeRTOS.list
+ 
+
+11:59:16 Build Finished. 0 errors, 1 warnings. (took 1s.527ms)
+
