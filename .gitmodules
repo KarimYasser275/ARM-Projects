@@ -4,3 +4,6 @@
 [submodule "ARM-FreeRTOS"]
 	path = ARM-FreeRTOS
 	url = C:/Program Files/Git/ARM-FreeRTOS
+[submodule "ARM_Bootloader"]
+	path = ARM_Bootloader
+	url = C:/Program Files/Git/ARM_Bootloader
