@@ -1,3 +1,6 @@
 [submodule "ARM"]
 	path = ARM
 	url = C:/Program Files/Git/ARM
+[submodule "ARM-FreeRTOS"]
+	path = ARM-FreeRTOS
+	url = C:/Program Files/Git/ARM-FreeRTOS
